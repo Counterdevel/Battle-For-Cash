@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Tela Inicial.unity
+    guid: cb664addc3bce8547970f1df5aaceafc
+  - enabled: 1
+    path: Assets/Scenes/Como jogar.unity
+    guid: baaf92e90d0af2c4b968317503bbc4d8
   m_configObjects: {}

@@ -8,7 +8,6 @@ public class CloseOpenAnim : MonoBehaviour
     public CanvasGroup background;
     void Start()
     {
-        background.LeanAlpha(0, 0.5f);
         transform.localScale = Vector2.zero;
     }
 
