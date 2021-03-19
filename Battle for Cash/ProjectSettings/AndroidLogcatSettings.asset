@@ -13,6 +13,12 @@
             "name": "com.DefaultCompany.BattleforCash",
             "processId": 29576,
             "exited": true
+        },
+        {
+            "deviceId": "12b47e10",
+            "name": "com.miui.home",
+            "processId": 2715,
+            "exited": false
         }
     ],
     "m_Tags": {
