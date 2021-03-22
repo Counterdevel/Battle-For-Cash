@@ -28,8 +28,8 @@ public class NetworkController : MonoBehaviourPunCallbacks
 
     void Start()
     {
-        loginPn.gameObject.SetActive(false);
-        lobbyPn.gameObject.SetActive(false);
+        loginPn.transform.localScale = Vector2.zero;
+        btnVoltar.transform.localScale = Vector2.zero;
 
         tempPlayerName = "User" + Random.Range(1, 20);
         playerNameInput.text = tempPlayerName;
@@ -110,18 +110,20 @@ public class NetworkController : MonoBehaviourPunCallbacks
     public void ClicouJogar()
     {
         loginPn.gameObject.SetActive(true);
-        imagens.gameObject.SetActive(false);
-        paineis.gameObject.SetActive(false);
-        botoes.gameObject.SetActive(false);
+        loginPn.transform.LeanScale(Vector2.one, 0.8f);
+        imagens.transform.LeanScale(Vector2.zero, 1f).setEaseInBack();
+        paineis.transform.LeanScale(Vector2.zero, 1f).setEaseInBack();
+        botoes.transform.LeanScale(Vector2.zero, 1f).setEaseInBack();
         btnVoltar.gameObject.SetActive(true);
+        btnVoltar.transform.LeanScale(Vector2.one, 0.8f);
     }
     public void ClicouVoltar()
     {
-        loginPn.gameObject.SetActive(false);
-        lobbyPn.gameObject.SetActive(false);
-        imagens.gameObject.SetActive(true);
-        paineis.gameObject.SetActive(true);
-        botoes.gameObject.SetActive(true);
-        btnVoltar.gameObject.SetActive(false);
+        loginPn.transform.LeanScale(Vector2.zero, 1f).setEaseInBack();
+        lobbyPn.transform.LeanScale(Vector2.zero, 1f).setEaseInBack();
+        imagens.transform.LeanScale(Vector2.one, 0.8f);
+        paineis.transform.LeanScale(Vector2.one, 0.8f);
+        botoes.transform.LeanScale(Vector2.one, 0.8f);
+        btnVoltar.transform.LeanScale(Vector2.zero, 1f).setEaseInBack();
     }
 }

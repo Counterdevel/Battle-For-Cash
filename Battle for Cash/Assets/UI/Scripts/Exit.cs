@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Exit : MonoBehaviour
 {
     [SerializeField] GameObject panelexit;
     public CanvasGroup background;
     public Transform box;
+    public Button[] buttons;
 
     void Update()
     {
@@ -23,6 +25,8 @@ public class Exit : MonoBehaviour
                 {
                     panelexit.SetActive(true);
                     Open();
+
+
                 }
             }
         }
@@ -43,6 +47,12 @@ public class Exit : MonoBehaviour
 
         box.localPosition = new Vector2(0, -Screen.height);
         box.LeanMoveLocalY(0, 0.5f).setEaseOutExpo().delay = 0.1f;
+
+        buttons[0].interactable = false;
+        buttons[1].interactable = false;
+        buttons[2].interactable = false;
+        buttons[3].interactable = false;
+        buttons[4].interactable = false;
     }
     public void Close()
     {
@@ -53,5 +63,10 @@ public class Exit : MonoBehaviour
     void OnComplete()
     {
         panelexit.SetActive(false);
+        buttons[0].interactable = true;
+        buttons[1].interactable = true;
+        buttons[2].interactable = true;
+        buttons[3].interactable = true;
+        buttons[4].interactable = true;
     }
 }
