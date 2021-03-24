@@ -24,6 +24,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
     public GameObject botoes;
     public GameObject imagens;
     public GameObject btnVoltar;
+    public GameObject gameplaylobby;
 
 
     void Start()
@@ -104,6 +105,8 @@ public class NetworkController : MonoBehaviourPunCallbacks
         lobbyPn.gameObject.SetActive(false);
         mainCamera.gameObject.SetActive(false);
 
+        gameplaylobby.gameObject.SetActive(true);
+
         PhotonNetwork.Instantiate(playerPUN.name, playerPUN.transform.position, playerPUN.transform.rotation, 0);
     }
 
@@ -120,7 +123,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
     public void ClicouVoltar()
     {
         loginPn.transform.LeanScale(Vector2.zero, 1f).setEaseInBack();
-        lobbyPn.transform.LeanScale(Vector2.zero, 1f).setEaseInBack();
+        lobbyPn.gameObject.SetActive(false);
         imagens.transform.LeanScale(Vector2.one, 0.8f);
         paineis.transform.LeanScale(Vector2.one, 0.8f);
         botoes.transform.LeanScale(Vector2.one, 0.8f);
