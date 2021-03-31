@@ -6,20 +6,26 @@ public class GameManagerCaiCaixa : MonoBehaviour
 {
 
     public GameObject PrefabCaixa;
-     GameObject CaixaTimerComponents;
+    GameObject CaixaTimerComponents;
+    private int index = 0;
+    private int index1 = 0;
 
-    public int CaixaSpawnChanceX;
-    public int CaixaSpawnChanceY;
+    public float[] position;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
 
-            CaixaSpawnChanceX = Random.Range(-10, 10);
-            CaixaSpawnChanceY = Random.Range(-10, 10);
+            int index = Random.Range(0, 9);
+            int index1 = Random.Range(0, 9);
 
-            CaixaTimerComponents = Instantiate(PrefabCaixa, new Vector3(CaixaSpawnChanceX, 10, CaixaSpawnChanceY), Quaternion.identity);
+            Vector3 pos = new Vector3(position[index], 5, position[index1]);
+
+            Debug.Log("X " + position[index]);
+            Debug.Log("Z " + position[index1]);
+
+            CaixaTimerComponents = Instantiate(PrefabCaixa, pos, Quaternion.identity);
             Destroy(CaixaTimerComponents.GetComponent<Rigidbody>(),5);
         }
     }
