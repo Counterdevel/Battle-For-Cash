@@ -2997,6 +2997,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8458665080319709423, guid: 1e5a707150dc6954981a0d16b1bb1680,
         type: 3}
+      propertyPath: rbPlayer
+      value: 
+      objectReference: {fileID: 1251824221}
+    - target: {fileID: 8458665080319709423, guid: 1e5a707150dc6954981a0d16b1bb1680,
+        type: 3}
       propertyPath: forcejump
       value: 10
       objectReference: {fileID: 0}
@@ -3032,6 +3037,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e5a707150dc6954981a0d16b1bb1680, type: 3}
+--- !u!54 &1251824221 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 8458665080319709417, guid: 1e5a707150dc6954981a0d16b1bb1680,
+    type: 3}
+  m_PrefabInstance: {fileID: 1251824220}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1303699813
 PrefabInstance:
   m_ObjectHideFlags: 0

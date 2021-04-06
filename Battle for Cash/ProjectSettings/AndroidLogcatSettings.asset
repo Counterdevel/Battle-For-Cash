@@ -1,10 +1,10 @@
 {
     "m_SelectedDeviceId": "12b47e10",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
-        "exited": false
+        "deviceId": "12b47e10",
+        "name": "com.DefaultCompany.BattleforCash",
+        "processId": 8668,
+        "exited": true
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
@@ -19,6 +19,12 @@
             "name": "com.miui.home",
             "processId": 2715,
             "exited": false
+        },
+        {
+            "deviceId": "12b47e10",
+            "name": "com.DefaultCompany.BattleforCash",
+            "processId": 8668,
+            "exited": true
         }
     ],
     "m_Tags": {
@@ -62,13 +68,13 @@
             true,
             true,
             true,
-            true,
+            false,
             true,
             true,
             true,
             true
         ],
-        "MemoryGroup": 1,
+        "MemoryGroup": 0,
         "Behavior": 1
     },
     "m_Filter": "",
