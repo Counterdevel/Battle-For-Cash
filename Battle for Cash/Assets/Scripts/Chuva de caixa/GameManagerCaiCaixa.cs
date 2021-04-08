@@ -7,9 +7,6 @@ public class GameManagerCaiCaixa : MonoBehaviour
 
     public GameObject PrefabCaixa;
     GameObject CaixaTimerComponents;
-    private int index = 0;
-    private int index1 = 0;
-
     public float[] position;
 
     void Update()
