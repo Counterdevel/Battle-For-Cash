@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
+    public Transform checkpoint;
+    GameObject player;
+    void Start()
+    {
 
-    private void Start()
-    {
+        player = GameObject.FindWithTag("Player");
     }
-    private void OnTriggerEnter(Collider other)
+
+    // Update is called once per frame
+    void OnTriggerEnter(Collider plyr)
     {
-        if (other.CompareTag("Player"))
+        if (plyr.gameObject.tag == "Player")
         {
-            GameManagerCorrida.Instance.lastcheckpointPos = transform.position;
+            player.transform.position = checkpoint.position;
+            player.transform.rotation = checkpoint.rotation;
         }
     }
 }

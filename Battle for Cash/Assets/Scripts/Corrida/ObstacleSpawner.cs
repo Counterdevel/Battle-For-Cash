@@ -5,20 +5,11 @@ using UnityEngine;
 public class ObstacleSpawner : MonoBehaviour
 {
     public GameObject[] obstacle;
-    public float spawnTimer = 1f;
-    public float timer = 0;
-    void Update()
+
+    private void Start()
     {
-        if(timer> spawnTimer)
-        {
-            int random = Random.Range(0, obstacle.Length);
-
-            GameObject obs = Instantiate(obstacle[random]);
-            obs.transform.position = transform.position + new Vector3(0, 0, 0);
-            Destroy(obs, 15);
-            timer = 0;
-        }
-
-        timer += Time.deltaTime;
+        int random = Random.Range(0, obstacle.Length);
+        Instantiate(obstacle[random],this.transform.position, this.transform.rotation);
     }
+
 }
