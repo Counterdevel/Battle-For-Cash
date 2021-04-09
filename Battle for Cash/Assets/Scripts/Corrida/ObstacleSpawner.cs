@@ -9,7 +9,6 @@ public class ObstacleSpawner : MonoBehaviour
     private void Start()
     {
         int random = Random.Range(0, obstacle.Length);
-        Instantiate(obstacle[random],this.transform.position, this.transform.rotation);
+       Instantiate(obstacle[random],transform.position, Quaternion.identity);
     }
-
 }
