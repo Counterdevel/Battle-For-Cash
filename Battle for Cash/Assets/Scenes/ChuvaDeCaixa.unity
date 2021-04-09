@@ -4602,8 +4602,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   caixa: {fileID: 9042624737868894866, guid: 914eacb77a247e14f9edd4f02ec0a171, type: 3}
-  inicioChuva: 0
-  intervalo: 0
+  inicioChuva: 3
+  intervalo: 5
   positionsx:
   - -21.5
   - -17.5
