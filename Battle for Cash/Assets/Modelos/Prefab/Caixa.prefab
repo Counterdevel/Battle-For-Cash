@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7385102095084057415}
   - component: {fileID: 4208956507243499918}
   - component: {fileID: 3672963680917029513}
+  - component: {fileID: 2906534302673593736}
   m_Layer: 0
   m_Name: Caixa
-  m_TagString: Untagged
+  m_TagString: Caixa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,3 +111,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &2906534302673593736
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9042624737868894866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.06755956, z: 2}
+  m_Center: {x: 0, y: -1.09, z: 0}

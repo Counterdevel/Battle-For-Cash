@@ -5,8 +5,8 @@ using UnityEngine;
 public class ChuvaDeCaixa : MonoBehaviour
 {
     public GameObject caixa;
-    public float tempoQueda = 0f;
-    public float tempoIntervalo = 0f;
+    public float inicioChuva = 0f;
+    public float intervalo = 0f;
 
     public float[] positionsx;
     public float[] positionsz;
@@ -15,7 +15,7 @@ public class ChuvaDeCaixa : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("RespawnCaixa", tempoQueda, tempoIntervalo);
+        InvokeRepeating("RespawnCaixa", inicioChuva, intervalo);
     }
 
     public void RespawnCaixa()

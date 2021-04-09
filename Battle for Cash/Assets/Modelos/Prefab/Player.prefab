@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8458665080319709417}
   - component: {fileID: 8458665080319709416}
   - component: {fileID: 8458665080319709423}
+  - component: {fileID: 3158772118568948794}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,6 +81,18 @@ MonoBehaviour:
   playerspeed: 4
   forcejump: 2
   isGround: 0
+--- !u!114 &3158772118568948794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8458665080319709419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71497f306c57f6f4d83d61ca3cfd9395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8458665080855714296
 GameObject:
   m_ObjectHideFlags: 0
