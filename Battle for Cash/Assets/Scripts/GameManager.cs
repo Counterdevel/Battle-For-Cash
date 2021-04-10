@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+
     public static GameManager Instance;
+    public Text textovitoria;
+    private GameObject vitorioso;
 
     private void Awake()
     {
@@ -14,10 +17,6 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
     }
-
-    public GameObject player1;
-    public GameObject player2;
-    public GameObject player3;
 
     public GameObject vitoria;
 
@@ -28,9 +27,14 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if(player1.activeSelf && !player2.activeSelf && !player3.activeSelf || !player1.activeSelf && player2.activeSelf && !player3.activeSelf || !player1.activeSelf && !player2.activeSelf && player3.activeSelf)
+        if (GameObject.FindGameObjectsWithTag("Player").Length == 1)
         {
+            vitorioso = GameObject.FindGameObjectWithTag("Player");
+            string nome = vitorioso.name;
+            Debug.Log(nome);
+            textovitoria.text = nome + " Venceu!";
             vitoria.SetActive(true);
+            
         }
     }
 }
