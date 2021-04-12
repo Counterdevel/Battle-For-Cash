@@ -1,29 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManagerCaiCaixa : MonoBehaviour
 {
+    public Text textovitoria;
+    public GameObject vitoria;
+    private GameObject vitorioso;
 
-    public GameObject PrefabCaixa;
-    GameObject CaixaTimerComponents;
-    public float[] position;
-
+    void Start()
+    {
+        vitoria.SetActive(false);
+    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (GameObject.FindGameObjectsWithTag("Player").Length == 1)
         {
-
-            int index = Random.Range(0, 9);
-            int index1 = Random.Range(0, 9);
-
-            Vector3 pos = new Vector3(position[index], 5, position[index1]);
-
-            Debug.Log("X " + position[index]);
-            Debug.Log("Z " + position[index1]);
-
-            CaixaTimerComponents = Instantiate(PrefabCaixa, pos, Quaternion.identity);
-            Destroy(CaixaTimerComponents.GetComponent<Rigidbody>(),5);
+            vitorioso = GameObject.FindGameObjectWithTag("Player");
+            string nome = vitorioso.name;
+            textovitoria.text = nome + " Venceu!";
+            vitoria.SetActive(true);
         }
     }
 }
