@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CaracteriscaPlayerCaixa : MonoBehaviour
+public class Caixa : MonoBehaviour
 {
-    public GameObject player;
-
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Caixa"))
+        if (other.CompareTag("Player"))
         {
-            player.SetActive(false);
+            other.gameObject.SetActive(false);
         }
     }
 }
