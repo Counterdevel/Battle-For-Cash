@@ -17,15 +17,16 @@ public class NetworkController : MonoBehaviourPunCallbacks
 
     [Header("PLAYER")]
     public GameObject playerPUN;
-    public GameObject mainCamera;
+    //public GameObject mainCamera;
 
     [Header("UI")]
     public GameObject botoes;
     public GameObject logo;
     public GameObject btnVoltar;
     public GameObject SelecaoDePersonagem;
-    public GameObject gameplaylobby;
-
+    //public GameObject gameplaylobby;
+    public GameObject canvasTelaInicial;
+    public GameObject canvasGameplay;
 
     void Start()
     {
@@ -106,8 +107,10 @@ public class NetworkController : MonoBehaviourPunCallbacks
         lobbyPn.transform.localPosition = new Vector2(0, 500);
         //mainCamera.gameObject.SetActive(false);
 
-        gameplaylobby.gameObject.SetActive(true);
+        //gameplaylobby.gameObject.SetActive(true);
 
+        canvasTelaInicial.SetActive(false);
+        canvasGameplay.SetActive(true);
         PhotonNetwork.Instantiate(playerPUN.name, playerPUN.transform.position, playerPUN.transform.rotation, 0);
     }
 

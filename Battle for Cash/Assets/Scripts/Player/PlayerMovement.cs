@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public PhotonView photonview;
+
     private VariableJoystick joystick;
     public Rigidbody rbPlayer;
 
@@ -16,12 +19,17 @@ public class PlayerMovement : MonoBehaviour
     {
         joystick = GameObject.Find("Variable Joystick").GetComponent<VariableJoystick>();
         rbPlayer = GetComponent<Rigidbody>();
+        photonview = GetComponent<PhotonView>();
+
     }
 
     void Update()
     {
-        MoveMobile();
-        Rotation();
+        if (photonview.IsMine)
+        {
+            MoveMobile();
+            Rotation();
+        }
     }
 
     void MoveMobile()
