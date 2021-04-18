@@ -27,14 +27,14 @@ public class ChuvaDeCaixa : MonoBehaviour
         z = Random.Range(0, 8);
         Vector3 position = new Vector3(positionsx[x], 35, positionsz[z]);
         float tamanholist = PosicoesJaSalvas.Count;
-        Debug.Log(tamanholist);
+        //Debug.Log(tamanholist);
         if (tamanholist == 88) 
         {
             CancelInvoke("RespawnCaixa");
         }
         else if (PosicoesJaSalvas.Contains(position))
         {
-            Debug.Log("Posicao ja existe");
+            //Debug.Log("Posicao ja existe");
             RespawnCaixa();
         }
         else

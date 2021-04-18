@@ -6,21 +6,38 @@ using UnityEngine.UI;
 public class GameManagerCaiCaixa : MonoBehaviour
 {
     public Text textovitoria;
-    public GameObject vitoria;
-    private GameObject vitorioso;
+    public GameObject [] players;
+    public int allplayers;
+    public static GameManagerCaiCaixa Instance;
+    public GameObject panel;
+
+    private void Awake()
+    {
+        if (!Instance)
+        {
+            Instance = this;
+        }
+    }
 
     void Start()
     {
-        vitoria.SetActive(false);
+        players = GameObject.FindGameObjectsWithTag("Player");
+        allplayers = players.Length;
     }
     void Update()
     {
-        if (GameObject.FindGameObjectsWithTag("Player").Length == 1)
+        if(allplayers == 1)
         {
-            vitorioso = GameObject.FindGameObjectWithTag("Player");
-            string nome = vitorioso.name;
-            textovitoria.text = nome + " Venceu!";
-            vitoria.SetActive(true);
+            GameObject vitorioso = GameObject.FindGameObjectWithTag("Player");
+            textovitoria.text = vitorioso.name + " Venceu!";
+            //panel.SetActive(true);
         }
     }
+
+    public void perdeuplayer(int perdeu, string perdedor)
+    {
+        allplayers -= perdeu;
+        print(perdedor);
+    }
+
 }
