@@ -111,7 +111,9 @@ public class NetworkController : MonoBehaviourPunCallbacks
 
         canvasTelaInicial.SetActive(false);
         canvasGameplay.SetActive(true);
-        PhotonNetwork.Instantiate(playerPUN.name, playerPUN.transform.position, playerPUN.transform.rotation, 0);
+
+        Vector3 pos = new Vector3(Random.Range(-20, 20), playerPUN.transform.position.y, Random.Range(-20, 20));
+        PhotonNetwork.Instantiate(playerPUN.name, pos, playerPUN.transform.rotation, 0);
     }
 
     public void ClicouJogar()

@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isGround;
 
+
     Vector3 direction, rotate;
     void Start()
     {

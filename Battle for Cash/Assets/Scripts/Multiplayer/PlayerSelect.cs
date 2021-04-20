@@ -8,7 +8,6 @@ public class PlayerSelect : MonoBehaviour
 {
     public int playerSelected = 0;
     public GameObject PlayerList;
-    public Image playerIconCanvas;
 
     PhotonView photonView;
     public GameObject myPlayerCanvas;
@@ -24,7 +23,7 @@ public class PlayerSelect : MonoBehaviour
     }
     public void SwitchPlayer()
     {
-        photonView.RPC("SwitchPlayerRPC", RpcTarget.AllBuffered);
+        photonView.RPC("SwitchPlayerRPC", RpcTarget.AllBufferedViaServer);
     }
     [PunRPC]
     public void SwitchPlayerRPC()
@@ -36,10 +35,6 @@ public class PlayerSelect : MonoBehaviour
             if (i == playerSelected)
             {
                 item.gameObject.SetActive(true);
-                if (item.gameObject.GetComponent<PlayerConfig>())
-                {
-                    playerIconCanvas.sprite = item.gameObject.GetComponent<PlayerConfig>().playerIcon;
-                }
             }
             else
             {
