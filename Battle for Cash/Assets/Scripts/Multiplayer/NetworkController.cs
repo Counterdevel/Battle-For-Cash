@@ -17,16 +17,13 @@ public class NetworkController : MonoBehaviourPunCallbacks
 
     [Header("PLAYER")]
     public GameObject playerPUN;
-    //public GameObject mainCamera;
 
     [Header("UI")]
     public GameObject botoes;
     public GameObject logo;
     public GameObject btnVoltar;
     public GameObject SelecaoDePersonagem;
-    //public GameObject gameplaylobby;
     public GameObject canvasTelaInicial;
-    public GameObject canvasGameplay;
 
     void Start()
     {
@@ -53,7 +50,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
         else
         {
             PhotonNetwork.NickName = tempPlayerName;
-        }       
+        }
 
         loginPn.transform.LeanMoveLocalY(-470, 1f); ;
         lobbyPn.transform.LeanMoveLocalY(0, 1f);
@@ -105,12 +102,8 @@ public class NetworkController : MonoBehaviourPunCallbacks
         Debug.LogWarning("Players Conectados: " + PhotonNetwork.CurrentRoom.PlayerCount);
 
         lobbyPn.transform.localPosition = new Vector2(0, 500);
-        //mainCamera.gameObject.SetActive(false);
-
-        //gameplaylobby.gameObject.SetActive(true);
 
         canvasTelaInicial.SetActive(false);
-        canvasGameplay.SetActive(true);
 
         Vector3 pos = new Vector3(Random.Range(-20, 20), playerPUN.transform.position.y, Random.Range(-20, 20));
         PhotonNetwork.Instantiate(playerPUN.name, pos, playerPUN.transform.rotation, 0);
@@ -139,4 +132,5 @@ public class NetworkController : MonoBehaviourPunCallbacks
         SelecaoDePersonagem.transform.LeanScale(Vector2.zero, 0f);
         PhotonNetwork.Disconnect();
     }
+
 }

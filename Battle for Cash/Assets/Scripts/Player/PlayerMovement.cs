@@ -10,10 +10,8 @@ public class PlayerMovement : MonoBehaviour
     private VariableJoystick joystick;
     public Rigidbody rbPlayer;
 
-    public float playerspeed, forcejump;
-
+    public float playerspeed, forcejump; 
     public bool isGround;
-
 
     Vector3 direction, rotate;
     void Start()
@@ -21,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
         joystick = GameObject.Find("Variable Joystick").GetComponent<VariableJoystick>();
         rbPlayer = GetComponent<Rigidbody>();
         photonview = GetComponent<PhotonView>();
-
     }
 
     void Update()

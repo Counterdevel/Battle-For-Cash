@@ -29,7 +29,7 @@ public class GameManagerCaiCaixa : MonoBehaviour
         if(allplayers == 1)
         {
             GameObject vitorioso = GameObject.FindGameObjectWithTag("Player");
-            textovitoria.text = vitorioso.name + " Venceu!";
+            textovitoria.text = vitorioso.GetComponent<PlayerName>().playerName.text + " Venceu!";
             //panel.SetActive(true);
         }
     }
