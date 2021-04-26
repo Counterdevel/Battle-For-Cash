@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class ChuvaDeCaixa : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class ChuvaDeCaixa : MonoBehaviour
     {
         InvokeRepeating("RespawnCaixa", inicioChuva, intervalo);
     }
-
+    [PunRPC]
     public void RespawnCaixa()
     {
 
