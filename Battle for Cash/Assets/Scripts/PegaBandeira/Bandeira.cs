@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class Bandeira : MonoBehaviour
 {
+    PlayerFlag player;
 
-
+    private void Update()
+    {
+        Use();
+    }
+    public void Use()
+    {
+        if(player != null)
+        {
+            player.PickUpFlag(gameObject);
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.tag =="Player")
         {
-            this.gameObject.SetActive(false);
-            Debug.Log("Player me pegou!!");
+            this.player = other.GetComponent<PlayerFlag>();
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        this.player = null;
+    }
 }
