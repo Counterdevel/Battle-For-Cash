@@ -8,6 +8,7 @@ TagManager:
   - GM
   - Water
   - Caixa
+  - Flag
   layers:
   - Default
   - TransparentFX
