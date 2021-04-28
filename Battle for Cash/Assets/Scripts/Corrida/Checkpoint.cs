@@ -8,7 +8,6 @@ public class Checkpoint : MonoBehaviour
     GameObject player;
     void Start()
     {
-
         player = GameObject.FindWithTag("Player");
     }
 
