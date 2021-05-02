@@ -5,24 +5,27 @@ using Photon.Pun;
 
 public class CaiChão : MonoBehaviour
 {
-    public List<GameObject> chao;
-    public float inicioChuva = 3f;
+    public List<GameObject> chaos;
+    GameObject chao;
+    public float inicioChuva = 2f;
     public float intervalo = 5f;
     void Start()
     {
-        InvokeRepeating("caichão", inicioChuva, intervalo);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        chaos.AddRange(GameObject.FindGameObjectsWithTag("Ground"));
+        InvokeRepeating("Caichao", inicioChuva, intervalo);
     }
     [PunRPC]
-    void caichão()
+    void Caichao()
     {
-        int index = Random.Range(0, chao.Count);
-        chao[index].GetComponent<MeshRenderer>().material.color = Color.red;
-        chao[index].GetComponent<Rigidbody>().isKinematic = false;
+        int index = Random.Range(0, chaos.Count);
+        chao = chaos[index];
+        chaos[index].GetComponent<MeshRenderer>().material.color = Color.red;
+        chaos[index].GetComponent<Rigidbody>().isKinematic = false;
+        chaos.Remove(chao);
+
+        if (chaos.Count == 0)
+        {
+            CancelInvoke("Caichao");
+        }
     }
 }

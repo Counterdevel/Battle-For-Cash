@@ -9,6 +9,7 @@ TagManager:
   - Water
   - Caixa
   - Flag
+  - Destroy
   layers:
   - Default
   - TransparentFX
