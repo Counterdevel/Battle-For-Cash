@@ -13666,7 +13666,7 @@ GameObject:
   - component: {fileID: 2110087505}
   - component: {fileID: 2110087504}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: MudaCena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13684,7 +13684,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2643828b8cb74a438241babf4e042b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playedScenes: 
 --- !u!114 &2110087505
 MonoBehaviour:
   m_ObjectHideFlags: 0

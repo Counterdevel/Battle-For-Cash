@@ -6,12 +6,10 @@ using Photon.Pun;
 
 public class GameManagerCaiCaixa : MonoBehaviour
 {
-    
+    int allplayers;
     public  List<GameObject> players;
     public  List<GameObject> playerseliminados;
-    int allplayers;
     [Header("UI Elements")]
-    public Text textovitoria;
     public GameObject panel;
     public Text quartoLugar;
     public Text terceiroLugar;
@@ -37,12 +35,11 @@ public class GameManagerCaiCaixa : MonoBehaviour
     {
        if(allplayers == 1)
         {
-            //textovitoria.text = vitorioso.GetComponent<PlayerName>().playerName.text + " Venceu!";
             panel.SetActive(true);
         }
     }
 
-    public void perdeuplayer(GameObject playeratingindo)
+    public void ranking(GameObject playeratingindo)
     {
         
         playerseliminados.Add(playeratingindo);
