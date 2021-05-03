@@ -10,7 +10,7 @@ public class Caixa : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.gameObject.SetActive(false);
-            GameManagerCaiCaixa.Instance.perdeuplayer(1, other.gameObject.name);
+            GameManagerCaiCaixa.Instance.perdeuplayer(other.gameObject);
         }
     }
 }
