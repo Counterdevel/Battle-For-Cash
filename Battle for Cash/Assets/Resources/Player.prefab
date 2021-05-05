@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1115095194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1115095195}
+  m_Layer: 0
+  m_Name: Socket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1115095195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115095194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 1.33, z: 0.015}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8458665080319709422}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &597783794230080874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,6 +1030,7 @@ GameObject:
   - component: {fileID: 8422476569002056459}
   - component: {fileID: 6031633519227669258}
   - component: {fileID: 3801764231014211786}
+  - component: {fileID: 476523985}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1022,6 +1053,7 @@ Transform:
   - {fileID: 5482438219983552136}
   - {fileID: 5557996830488552986}
   - {fileID: 3988601043598680608}
+  - {fileID: 1115095195}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1068,6 +1100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: {fileID: 1006456220103983891}
+  saldo: 0
 --- !u!114 &8458665080319709423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1080,7 +1113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9b8998ea147fb449ca7bad5516a0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  photonview: {fileID: 0}
+  photonview: {fileID: 8422476569002056459}
   rbPlayer: {fileID: 8458665080319709417}
   playerspeed: 15
   forcejump: 10
@@ -1105,7 +1138,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 6031633519227669258}
-  sceneViewId: 0
+  sceneViewId: 2
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &6031633519227669258
@@ -1139,6 +1172,20 @@ MonoBehaviour:
   playerSelected: 0
   PlayerList: {fileID: 597783794230080874}
   myPlayerCanvas: {fileID: 6672678793275954530}
+--- !u!114 &476523985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8458665080319709419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7235017b40a43447abf366a46ccd64d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bandeiraRoubada: {fileID: 0}
+  socket: {fileID: 1115095194}
 --- !u!1 &8458665080855714296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,7 +1203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8458665080855714297
 Transform:
   m_ObjectHideFlags: 0
