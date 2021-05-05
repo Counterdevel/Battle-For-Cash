@@ -19,6 +19,10 @@ public class RestaUmManager : MonoBehaviour
     {
         players.AddRange(GameObject.FindGameObjectsWithTag("Player"));
         allplayers = players.Count;
+        if (allplayers == 4)
+        {
+            gameObject.GetComponent<CaiChão>().enabled = true;
+        }
     }
 
     private void Update()

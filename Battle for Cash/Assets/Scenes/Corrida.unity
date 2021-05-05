@@ -208,8 +208,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &127331939
-MeshCollider:
+--- !u!65 &127331939
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -218,10 +218,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000001, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &127331940
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -844,7 +843,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678999469}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0bb8e5db7e7ed7c459a1b84c3ca1bece, type: 3}
   m_Name: 
@@ -1284,8 +1283,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &1507810698
-MeshCollider:
+--- !u!65 &1507810698
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1294,10 +1293,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000001, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1507810699
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1397,7 +1395,7 @@ Camera:
   m_GameObject: {fileID: 1529448060}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -1892,13 +1890,27 @@ GameObject:
   - component: {fileID: 7691156030948564126}
   - component: {fileID: 5836509310029750913}
   - component: {fileID: 4330349597466224609}
+  - component: {fileID: 286385724989717260}
   m_Layer: 0
   m_Name: Terra.007
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &286385724989717260
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286385724989717259}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19999999, y: 0.12823617, z: 0.019999996}
+  m_Center: {x: 0, y: 0.00000011920929, z: 0}
 --- !u!33 &379114985181734169
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1995,13 +2007,27 @@ GameObject:
   - component: {fileID: 2704855773209587352}
   - component: {fileID: 7069948148559697796}
   - component: {fileID: 550159443356493843}
+  - component: {fileID: 545037146630315033}
   m_Layer: 0
   m_Name: Terra
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &545037146630315033
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545037146630315032}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19999999, y: 0.19999996, z: 0.019999996}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &550159443356493843
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2052,13 +2078,27 @@ GameObject:
   - component: {fileID: 5220847574520995391}
   - component: {fileID: 7807518808206211161}
   - component: {fileID: 2930988209029255162}
+  - component: {fileID: 559753263062905583}
   m_Layer: 0
   m_Name: Ponte
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &559753263062905583
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559753263062905582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020000003, y: 0.021753613, z: 0.37017435}
+  m_Center: {x: 0.0000000023283064, y: 0.0049555004, z: -0.000000037252903}
 --- !u!33 &710888775236078993
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2171,13 +2211,27 @@ GameObject:
   - component: {fileID: 2187436338653934382}
   - component: {fileID: 1858133780715085472}
   - component: {fileID: 5326511243361714990}
+  - component: {fileID: 1071411926776779044}
   m_Layer: 0
   m_Name: "Ch\xE3o De Impuls\xE3o.005"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1071411926776779044
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071411926776779043}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.044619683, y: 0.044619676, z: 0.0072902692}
+  m_Center: {x: 0, y: 0.000000030970465, z: -0.00080354686}
 --- !u!1 &1159170008217090753
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,13 +2243,27 @@ GameObject:
   - component: {fileID: 6114235930420669277}
   - component: {fileID: 3017648662688551745}
   - component: {fileID: 3077399980132132379}
+  - component: {fileID: 1159170008217090754}
   m_Layer: 0
   m_Name: Terra.004
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1159170008217090754
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159170008217090753}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.054982804, y: 0.19012076, z: 0.019999996}
+  m_Center: {x: 0, y: 0.000000059604645, z: 0}
 --- !u!4 &1228090286662660712
 Transform:
   m_ObjectHideFlags: 0
@@ -2229,13 +2297,27 @@ GameObject:
   - component: {fileID: 2630385434353327434}
   - component: {fileID: 7884472855542559140}
   - component: {fileID: 4182466110057608267}
+  - component: {fileID: 1321233183595937408}
   m_Layer: 0
   m_Name: Terra.006
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1321233183595937408
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321233183595937407}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19999999, y: 0.12966421, z: 0.019999996}
+  m_Center: {x: 0, y: 0.00000008940697, z: 7.1054274e-15}
 --- !u!33 &1858133780715085472
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2283,13 +2365,41 @@ GameObject:
   - component: {fileID: 6480758382092005124}
   - component: {fileID: 4608062425778705639}
   - component: {fileID: 2502521200611727799}
+  - component: {fileID: 2163147928595286171}
+  - component: {fileID: 2163147928595286173}
   m_Layer: 0
   m_Name: Toco.001
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &2163147928595286171
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2163147928595286170}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8459872512451714671, guid: a3a1f15bb6546bc45bb252ef75fb4b2d, type: 3}
+--- !u!114 &2163147928595286173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2163147928595286170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a3ed92ed57b154faa63991f5e00d88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2187436338653934382
 Transform:
   m_ObjectHideFlags: 0
@@ -2493,13 +2603,27 @@ GameObject:
   - component: {fileID: 4178453368108972811}
   - component: {fileID: 5035966384061951708}
   - component: {fileID: 3004966828263318183}
+  - component: {fileID: 2955033618388394953}
   m_Layer: 0
   m_Name: Terra.003
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &2955033618388394953
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2955033618388394952}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19999999, y: 0.12823617, z: 0.019999996}
+  m_Center: {x: 0, y: 0.000000059604645, z: 0}
 --- !u!23 &3004966828263318183
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3051,13 +3175,27 @@ GameObject:
   - component: {fileID: 1228090286662660712}
   - component: {fileID: 6370155032112063651}
   - component: {fileID: 5086550773851564420}
+  - component: {fileID: 5554401278181973733}
   m_Layer: 0
   m_Name: "Ch\xE3o De Impuls\xE3o.004"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &5554401278181973733
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5554401278181973732}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.044619683, y: 0.044619676, z: 0.009342102}
+  m_Center: {x: 0, y: 0.000000030939894, z: -0.0018294796}
 --- !u!4 &5610833358634719130
 Transform:
   m_ObjectHideFlags: 0
@@ -3122,13 +3260,27 @@ GameObject:
   - component: {fileID: 2254191522154506486}
   - component: {fileID: 8173225811415249542}
   - component: {fileID: 4706546077651565079}
+  - component: {fileID: 5816872239214540442}
   m_Layer: 0
   m_Name: Ponte.001
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &5816872239214540442
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5816872239214540441}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020000003, y: 0.021753613, z: 0.37017435}
+  m_Center: {x: 0.0000000023283064, y: 0.0049555004, z: -0.000000037252903}
 --- !u!33 &5836509310029750913
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3205,13 +3357,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2163147928595286170}
-  m_LocalRotation: {x: -0.65328175, y: 0.27059758, z: 0.2705976, w: 0.6532817}
+  m_LocalRotation: {x: -0.6532815, y: 0.27059805, z: 0.27059805, w: 0.6532815}
   m_LocalPosition: {x: 6, y: 1, z: -45.965805}
   m_LocalScale: {x: 49.143715, y: 49.143715, z: 49.143715}
   m_Children: []
   m_Father: {fileID: 543450653042754635}
   m_RootOrder: 23
-  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 45.000004}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 45.000004}
 --- !u!4 &6486322166078580283
 Transform:
   m_ObjectHideFlags: 0
@@ -3219,13 +3371,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7157862097294950651}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -6, y: 1, z: -45.965805}
   m_LocalScale: {x: 49.143715, y: 49.143715, z: 49.143715}
   m_Children: []
   m_Father: {fileID: 543450653042754635}
   m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &6548908426372602334
 GameObject:
   m_ObjectHideFlags: 0
@@ -3338,13 +3490,27 @@ GameObject:
   - component: {fileID: 6897497221691650348}
   - component: {fileID: 6672206487104829265}
   - component: {fileID: 924335240954535330}
+  - component: {fileID: 7108008702878189884}
   m_Layer: 0
   m_Name: Terra.001
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7108008702878189884
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7108008702878189883}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07308123, y: 0.101327784, z: 0.019999996}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7157862097294950651
 GameObject:
   m_ObjectHideFlags: 0
@@ -3356,13 +3522,41 @@ GameObject:
   - component: {fileID: 6486322166078580283}
   - component: {fileID: 5489862045937510879}
   - component: {fileID: 8578899863227920886}
+  - component: {fileID: 7157862097294950652}
+  - component: {fileID: 7157862097294950654}
   m_Layer: 0
   m_Name: Toco
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &7157862097294950652
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7157862097294950651}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1320710736027503050, guid: a3a1f15bb6546bc45bb252ef75fb4b2d, type: 3}
+--- !u!114 &7157862097294950654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7157862097294950651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a3ed92ed57b154faa63991f5e00d88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7406987324581382639
 GameObject:
   m_ObjectHideFlags: 0
@@ -3374,13 +3568,27 @@ GameObject:
   - component: {fileID: 930835137640814491}
   - component: {fileID: 8593000706444215405}
   - component: {fileID: 5673445980152062871}
+  - component: {fileID: 7406987324581382640}
   m_Layer: 0
   m_Name: "Ch\xE3o De Impuls\xE3o.001"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7406987324581382640
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7406987324581382639}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.044619683, y: 0.044619676, z: 0.008482647}
+  m_Center: {x: 0, y: 0.00000005956293, z: -0.0013997561}
 --- !u!23 &7442728732848499472
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3453,13 +3661,27 @@ GameObject:
   - component: {fileID: 6675657722514084106}
   - component: {fileID: 99202464221575643}
   - component: {fileID: 8629712811381683569}
+  - component: {fileID: 7727093998014513868}
   m_Layer: 0
   m_Name: "Ch\xE3o De Impuls\xE3o.003"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7727093998014513868
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7727093998014513867}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.044619683, y: 0.044619676, z: 0.009204079}
+  m_Center: {x: 0, y: 0.000000030941948, z: -0.0017604562}
 --- !u!33 &7807518808206211161
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3505,13 +3727,27 @@ GameObject:
   - component: {fileID: 3235679379433677484}
   - component: {fileID: 1038016562064602390}
   - component: {fileID: 4314698684089421548}
+  - component: {fileID: 8018368420908018351}
   m_Layer: 0
   m_Name: Ponte.002
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &8018368420908018351
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8018368420908018350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020000003, y: 0.021753613, z: 0.37017435}
+  m_Center: {x: 0.0000000023283064, y: 0.0049555004, z: -0.000000037252903}
 --- !u!1 &8023775720312300826
 GameObject:
   m_ObjectHideFlags: 0
@@ -3523,13 +3759,27 @@ GameObject:
   - component: {fileID: 2342128995948024516}
   - component: {fileID: 4690646272705747429}
   - component: {fileID: 7442728732848499472}
+  - component: {fileID: 8023775720312300827}
   m_Layer: 0
   m_Name: Terra.002
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &8023775720312300827
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8023775720312300826}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07308123, y: 0.101327784, z: 0.019999996}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &8098981461053159875
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3580,13 +3830,27 @@ GameObject:
   - component: {fileID: 5610833358634719130}
   - component: {fileID: 710888775236078993}
   - component: {fileID: 6648144860968829090}
+  - component: {fileID: 8130346793456635031}
   m_Layer: 0
   m_Name: "Ch\xE3o De Impuls\xE3o.002"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &8130346793456635031
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8130346793456635030}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.044619683, y: 0.044619676, z: 0.008154248}
+  m_Center: {x: 0, y: 0.00000005956782, z: -0.0012355482}
 --- !u!33 &8173225811415249542
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3706,13 +3970,27 @@ GameObject:
   - component: {fileID: 4921131307122245526}
   - component: {fileID: 2342605860167807628}
   - component: {fileID: 419839783434127858}
+  - component: {fileID: 8632132704556080805}
   m_Layer: 0
   m_Name: "Ch\xE3o De Impuls\xE3o"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &8632132704556080805
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8632132704556080804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.044619683, y: 0.04699187, z: 0.008433472}
+  m_Center: {x: 0, y: 0.0011861562, z: -0.001375172}
 --- !u!23 &8871011679754092394
 MeshRenderer:
   m_ObjectHideFlags: 0

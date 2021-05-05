@@ -6,6 +6,7 @@ using Photon.Pun;
 
 public class GameManagerCaiCaixa : MonoBehaviour
 {
+
     int allplayers;
     public  List<GameObject> players;
     public  List<GameObject> playerseliminados;
@@ -30,6 +31,11 @@ public class GameManagerCaiCaixa : MonoBehaviour
     {
         players.AddRange(GameObject.FindGameObjectsWithTag("Player"));
         allplayers = players.Count;
+        if (allplayers == 4)
+        {
+            gameObject.GetComponent<ChuvaDeCaixa>().enabled = true;
+        }
+       
     }
     void Update()
     {

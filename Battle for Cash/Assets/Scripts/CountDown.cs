@@ -6,11 +6,18 @@ using UnityEngine.UI;
 public class CountDown : MonoBehaviour
 {
     public int countdownTime;
+    int allplayers;
+    public List<GameObject> players;
     public Text countdownText;
 
     private void Start()
     {
-        StartCoroutine(CountdownToStart());
+        players.AddRange(GameObject.FindGameObjectsWithTag("Player"));
+        allplayers = players.Count;
+        if(allplayers == 4)
+        {
+            StartCoroutine(CountdownToStart());
+        }
     }
     IEnumerator CountdownToStart()
     {
