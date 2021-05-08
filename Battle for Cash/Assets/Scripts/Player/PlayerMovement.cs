@@ -57,5 +57,15 @@ public class PlayerMovement : MonoBehaviour
         {
             isGround = true;
         }
+        if (collision.gameObject.CompareTag("Plataforma"))
+        {
+            isGround = true;
+            this.transform.parent = collision.transform;
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Plataforma"))
+            this.transform.parent = null;
     }
 }

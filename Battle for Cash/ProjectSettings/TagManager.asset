@@ -10,6 +10,7 @@ TagManager:
   - Caixa
   - Flag
   - Destroy
+  - Plataforma
   layers:
   - Default
   - TransparentFX

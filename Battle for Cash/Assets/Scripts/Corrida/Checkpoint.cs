@@ -20,5 +20,5 @@ public class Checkpoint : MonoBehaviour
             player.transform.rotation = checkpoint.rotation;
         }
     }
-    bandeiraRoubada.transform.position = new Vector3(Random.Range(-43.5f, 30f), -5.62f, Random.Range(-64f, -10.5f));
+    //bandeiraRoubada.transform.position = new Vector3(Random.Range(-43.5f, 30f), -5.62f, Random.Range(-64f, -10.5f));
 }

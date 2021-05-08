@@ -1678,7 +1678,7 @@ PrefabInstance:
     - target: {fileID: 8458665080319709422, guid: 1e5a707150dc6954981a0d16b1bb1680,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.3
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 8458665080319709422, guid: 1e5a707150dc6954981a0d16b1bb1680,
         type: 3}
@@ -1688,7 +1688,7 @@ PrefabInstance:
     - target: {fileID: 8458665080319709422, guid: 1e5a707150dc6954981a0d16b1bb1680,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -601.2
+      value: -514.1
       objectReference: {fileID: 0}
     - target: {fileID: 8458665080319709422, guid: 1e5a707150dc6954981a0d16b1bb1680,
         type: 3}
@@ -2369,7 +2369,7 @@ GameObject:
   - component: {fileID: 2163147928595286173}
   m_Layer: 0
   m_Name: Toco.001
-  m_TagString: Ground
+  m_TagString: Plataforma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2400,6 +2400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a3ed92ed57b154faa63991f5e00d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 500
 --- !u!4 &2187436338653934382
 Transform:
   m_ObjectHideFlags: 0
@@ -3526,7 +3527,7 @@ GameObject:
   - component: {fileID: 7157862097294950654}
   m_Layer: 0
   m_Name: Toco
-  m_TagString: Ground
+  m_TagString: Plataforma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3557,6 +3558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a3ed92ed57b154faa63991f5e00d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 500
 --- !u!1 &7406987324581382639
 GameObject:
   m_ObjectHideFlags: 0

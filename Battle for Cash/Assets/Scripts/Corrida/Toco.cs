@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class Toco : MonoBehaviour
 {
-    void Start()
-    {
+    public float speed = 50;
 
-    }
-
+    //private void OnCollisionEnter(Collision collision)
+    //{
+      //  collision.transform.parent = this.transform;
+    //}
+    //private void OnCollisionExit(Collision collision)
+    //{
+        //collision.transform.parent = null;
+    //}
     void Update()
     {
-        transform.Rotate(transform.position.x, 180, transform.position.z);
+       Rotate();
+    }
+
+    void Rotate()
+    {
+        transform.Rotate(Vector3.forward * speed * Time.deltaTime);
     }
 }
