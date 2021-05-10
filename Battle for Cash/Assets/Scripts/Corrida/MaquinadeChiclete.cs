@@ -5,10 +5,10 @@ using UnityEngine;
 public class MaquinadeChiclete : MonoBehaviour
 {
     public GameObject prefabBala;
-    public float bulletSpeed = 100f;
+    public float tempoderepetição = 2f;
     void Start()
     {
-        InvokeRepeating("disparaBala",0, 3f);
+        InvokeRepeating("disparaBala",0, tempoderepetição);
     }
  
     void disparaBala()
