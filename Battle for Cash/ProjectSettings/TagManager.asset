@@ -12,6 +12,7 @@ TagManager:
   - Destroy
   - Plataforma
   - PlayerFlag
+  - Socket
   layers:
   - Default
   - TransparentFX

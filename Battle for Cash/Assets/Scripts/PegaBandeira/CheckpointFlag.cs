@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class CheckpointFlag : MonoBehaviour
 {
-    public static bool drowned = false;
+    bool lostFlag = false;
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if(other.CompareTag("Player"))
         {
-            drowned = true;
+            lostFlag = true;
+            Flag.Instance.RespawnFlag(lostFlag);
         }
-    }
-
-    private void Update()
-    {
-        Flag.Instance.LostFlag(drowned);
     }
 }
