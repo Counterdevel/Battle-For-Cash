@@ -4,51 +4,38 @@ using UnityEngine;
 
 public class PlayerFlag : MonoBehaviour
 {
-    public GameObject bandeiraRoubada;
-    public Transform socket;
-    public static bool flagado = false;
-    bool perdeuBandeira;
+    public GameObject flag;
 
-    Vector3 position;
+    public static bool flagCaptured = false;
 
     private void Start()
     {
-        bandeiraRoubada = GameObject.FindGameObjectWithTag("Flag");
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player" && flagado == false)
-        {
-            bandeiraRoubada.transform.position = socket.position;
-            bandeiraRoubada.transform.parent = socket;
-            flagado = true;
-            perdeuBandeira = false;
-        }
+        flag = GameObject.FindWithTag("PlayerFlag");
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Water") && flagado == true)
+        if(other.CompareTag("Flag"))
         {
-            perdeuBandeira = true;
-            flagado = false;
+            flag.SetActive(true);
+            flagCaptured = true;
+        }
+        if(other.CompareTag("Water"))
+        {
+            flag.SetActive(false);
+            flagCaptured = false;
         }
     }
 
-    public void PickUpFlag(GameObject flag)
+    private void OnCollisionEnter(Collision collision)
     {
-        flag.transform.position = socket.position;
-        flag.transform.parent = socket;
-        flagado = true;
-    }
-
-    public void PerdeuFlag()
-    {
-        if (perdeuBandeira == true)
+        if(collision.collider.CompareTag("Ground"))
         {
-            position = new Vector3((Random.Range(-43.5f, 30f)), -5.62f, Random.Range(-64f, -10.5f));
-            Instantiate(bandeiraRoubada, position, Quaternion.identity);
+            CheckpointFlag.drowned = false;
+        }
+        if(collision.collider.CompareTag("Player") && CheckpointFlag.drowned == false && flagCaptured == false)
+        {
+            flag.SetActive(true);
         }
     }
 }

@@ -4,22 +4,18 @@ using UnityEngine;
 
 public class CheckpointFlag : MonoBehaviour
 {
-    public Transform checkpoint;
-    public GameObject flag;
-    GameObject player;
-    void Start()
+    public static bool drowned = false;
+
+    void OnTriggerEnter(Collider other)
     {
-        player = GameObject.FindWithTag("Player");
-        flag = GameObject.FindGameObjectWithTag("Flag");
+        if (other.gameObject.tag == "Player")
+        {
+            drowned = true;
+        }
     }
 
-    // Update is called once per frame
-    void OnTriggerEnter(Collider plyr)
+    private void Update()
     {
-        if (plyr.gameObject.tag == "Player")
-        {
-            player.transform.position = checkpoint.position;
-            player.transform.rotation = checkpoint.rotation;
-        }
+        Flag.Instance.LostFlag(drowned);
     }
 }
