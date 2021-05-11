@@ -11,6 +11,7 @@ TagManager:
   - Flag
   - Destroy
   - Plataforma
+  - PlayerFlag
   layers:
   - Default
   - TransparentFX
