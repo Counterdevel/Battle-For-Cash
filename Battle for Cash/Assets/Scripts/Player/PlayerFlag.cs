@@ -10,7 +10,7 @@ public class PlayerFlag : MonoBehaviour
 
     private void Start()
     {
-
+        flag = GameObject.FindWithTag("PlayerFlag");
     }
 
     private void OnTriggerEnter(Collider other)

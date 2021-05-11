@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Flag : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class Flag : MonoBehaviour
         }
     }
 
+    [PunRPC]
     public void LostFlag(bool lost)
     {
         lostFlag = lost;
