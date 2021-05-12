@@ -42,14 +42,14 @@ public class ContagemRegressiva : MonoBehaviour
                 fimSegundos = true;
             }
         }
-        if(fimMinuto == true && fimSegundos == true && PlayerFlag.flagCaptured == true)
+       // if(fimMinuto == true && fimSegundos == true && PlayerFlag.flagCaptured == true)
         {
             minutosText.enabled = false;
             segundosText.enabled = false;
             pontos.enabled = false;
             GameManagerFlag.Instance.VenceuJogo(true);
         }
-        if (fimMinuto == true && fimSegundos == true && PlayerFlag.flagCaptured == false)
+       // if (fimMinuto == true && fimSegundos == true && PlayerFlag.flagCaptured == false)
         {
             minutosText.enabled = false;
             segundosText.enabled = false;

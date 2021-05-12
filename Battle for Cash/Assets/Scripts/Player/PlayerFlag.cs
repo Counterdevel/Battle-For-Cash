@@ -1,41 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class PlayerFlag : MonoBehaviour
 {
-    public GameObject flag;
-
-    public static bool flagCaptured = false;
+    PhotonView photonView;
 
     private void Start()
     {
-        flag = GameObject.FindWithTag("PlayerFlag");
+        photonView.GetComponent<PhotonView>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        if(other.CompareTag("Flag"))
+        if(!photonView.IsMine)
         {
-            flag.SetActive(true);
-            flagCaptured = true;
-        }
-        if(other.CompareTag("Water"))
-        {
-            flag.SetActive(false);
-            flagCaptured = false;
+            return;
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.CompareTag("Ground"))
+        if(collision.collider.CompareTag("Player"))
         {
-            CheckpointFlag.drowned = false;
-        }
-        if(collision.collider.CompareTag("Player") && CheckpointFlag.drowned == false && flagCaptured == false)
-        {
-            flag.SetActive(true);
+            Flag.Instance.StolenFlag(true);
         }
     }
 }
