@@ -332,11 +332,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148059913}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 14.183618, y: 1, z: 1}
-  m_Center: {x: -6.05937, y: 0, z: 1.4817947e-12}
+  m_Size: {x: 14.183618, y: 3.2100954, z: 1}
+  m_Center: {x: -6.05937, y: -1.1050476, z: 1.4817947e-12}
 --- !u!1 &189485894
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,11 +362,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189485894}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 14.183618, y: 1, z: 1}
-  m_Center: {x: -6.05937, y: 0, z: 1.4817947e-12}
+  m_Size: {x: 14.183618, y: 7.9826846, z: 1}
+  m_Center: {x: -6.05937, y: -3.4913423, z: 1.4817947e-12}
 --- !u!4 &189485896
 Transform:
   m_ObjectHideFlags: 0
@@ -747,6 +747,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MaquinaDechicletes2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933035177720811491, guid: 909e23c54f5bf8546a056160d04bde5d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2933035177720811518, guid: 909e23c54f5bf8546a056160d04bde5d,
         type: 3}
@@ -2452,6 +2457,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MaquinaDechicletes1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2933035177720811491, guid: 909e23c54f5bf8546a056160d04bde5d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2933035177720811518, guid: 909e23c54f5bf8546a056160d04bde5d,
         type: 3}
       propertyPath: m_RootOrder
@@ -3467,6 +3477,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MaquinaDechicletes1
       objectReference: {fileID: 0}
+    - target: {fileID: 2933035177720811491, guid: 909e23c54f5bf8546a056160d04bde5d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2933035177720811518, guid: 909e23c54f5bf8546a056160d04bde5d,
         type: 3}
       propertyPath: m_RootOrder
@@ -3578,6 +3593,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 476523985, guid: 1e5a707150dc6954981a0d16b1bb1680, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6672678793275954542, guid: 1e5a707150dc6954981a0d16b1bb1680,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -3593,10 +3612,40 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8458665080319709416, guid: 1e5a707150dc6954981a0d16b1bb1680,
+        type: 3}
+      propertyPath: m_Height
+      value: 2.0105348
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458665080319709416, guid: 1e5a707150dc6954981a0d16b1bb1680,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.53883135
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458665080319709416, guid: 1e5a707150dc6954981a0d16b1bb1680,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.010725856
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458665080319709416, guid: 1e5a707150dc6954981a0d16b1bb1680,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.004128933
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458665080319709417, guid: 1e5a707150dc6954981a0d16b1bb1680,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8458665080319709417, guid: 1e5a707150dc6954981a0d16b1bb1680,
         type: 3}
       propertyPath: m_Constraints
       value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458665080319709417, guid: 1e5a707150dc6954981a0d16b1bb1680,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8458665080319709419, guid: 1e5a707150dc6954981a0d16b1bb1680,
         type: 3}
@@ -3676,6 +3725,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MaquinaDechicletes2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933035177720811491, guid: 909e23c54f5bf8546a056160d04bde5d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2933035177720811518, guid: 909e23c54f5bf8546a056160d04bde5d,
         type: 3}
@@ -3898,20 +3952,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7799057320501108354}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &1944139261
-MeshCollider:
+--- !u!65 &1944139261
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1944139257}
-  m_Material: {fileID: 13400000, guid: c3239414f1f6766449c1f00b5e5c4135, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1647628793335635476, guid: 8d254368ce44df7418048f794daf83ae, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.287237, y: 2.3056607, z: 0.04957186}
+  m_Center: {x: -0.004020146, y: 0.0048643504, z: -0.0040732156}
 --- !u!1 &1963769773
 GameObject:
   m_ObjectHideFlags: 0
@@ -4896,6 +4949,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MaquinaDechicletes
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933035177720811491, guid: 909e23c54f5bf8546a056160d04bde5d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2933035177720811518, guid: 909e23c54f5bf8546a056160d04bde5d,
         type: 3}
@@ -5910,7 +5968,7 @@ PrefabInstance:
     - target: {fileID: 8217829314583956035, guid: 8cacce391f2ab32459c76040b7d254aa,
         type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Meleca
       objectReference: {fileID: 0}
     - target: {fileID: 8737063079103287545, guid: 8cacce391f2ab32459c76040b7d254aa,
         type: 3}

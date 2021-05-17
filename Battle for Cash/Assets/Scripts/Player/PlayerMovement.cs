@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     Vector3 direction, rotate;
     void Start()
     {
+        playerspeed = 15;
         joystick = GameObject.Find("Variable Joystick").GetComponent<VariableJoystick>();
         rbPlayer = GetComponent<Rigidbody>();
         photonview = GetComponent<PhotonView>();
@@ -57,15 +58,35 @@ public class PlayerMovement : MonoBehaviour
         {
             isGround = true;
         }
+        if (collision.gameObject.CompareTag("Meleca"))
+        {
+            playerspeed = 7;
+            isGround = false;
+        }
         if (collision.gameObject.CompareTag("Plataforma"))
         {
             isGround = true;
             this.transform.parent = collision.transform;
+        }
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            rbPlayer.freezeRotation = false;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Water"))
+        {
+            rbPlayer.freezeRotation = true;
         }
     }
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("Plataforma"))
             this.transform.parent = null;
+        if (collision.gameObject.CompareTag("Meleca"))
+            playerspeed = 15;
+        
     }
 }
