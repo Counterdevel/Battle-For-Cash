@@ -15,6 +15,7 @@ TagManager:
   - Socket
   - Meleca
   - Bullet
+  - Sorvete
   layers:
   - Default
   - TransparentFX

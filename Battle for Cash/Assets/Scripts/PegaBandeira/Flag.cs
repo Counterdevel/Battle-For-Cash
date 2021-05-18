@@ -44,7 +44,7 @@ public class Flag : MonoBehaviour
             PhotonNetwork.Instantiate(gameObject.name, transform.position = new Vector3(Random.Range(-5f, -81.2f), 0f, Random.Range(32f, -56.5f)), transform.rotation);
         }
     }
-
+    [PunRPC]
     public void StolenFlag(bool stolen)
     {
         if(stolen == true && flagCaptured == true)
