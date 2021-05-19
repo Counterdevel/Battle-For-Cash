@@ -15,7 +15,11 @@ TagManager:
   - Socket
   - Meleca
   - Bullet
+<<<<<<< Updated upstream
   - Sorvete
+=======
+  - Parede
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

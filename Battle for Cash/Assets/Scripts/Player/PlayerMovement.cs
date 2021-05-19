@@ -68,8 +68,10 @@ public class PlayerMovement : MonoBehaviour
             isGround = true;
             this.transform.parent = collision.transform;
         }
+
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            playerspeed = 0;
             rbPlayer.freezeRotation = false;
         }
     }
@@ -78,7 +80,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.CompareTag("Water"))
         {
+            playerspeed = 15;
             rbPlayer.freezeRotation = true;
+            rbPlayer.velocity = Vector3.zero;
+            rbPlayer.angularVelocity = Vector3.zero;
         }
     }
     private void OnCollisionExit(Collision collision)

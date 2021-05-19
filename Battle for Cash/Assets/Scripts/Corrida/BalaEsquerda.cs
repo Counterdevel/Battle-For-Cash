@@ -18,10 +18,7 @@ public class BalaEsquerda : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Water"))
+        if (other.gameObject.CompareTag("Parede"))
         {
             Destroy(gameObject);
         }
