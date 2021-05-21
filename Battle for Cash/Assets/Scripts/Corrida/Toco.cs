@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class Toco : MonoBehaviour
        Rotate();
     }
 
+    [PunRPC]
     void Rotate()
     {
         transform.Rotate(Vector3.forward * speed * Time.deltaTime);

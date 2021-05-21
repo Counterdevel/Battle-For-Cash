@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,11 @@ public class ObstacleSpawner : MonoBehaviour
     private void Start()
     {
         int random = Random.Range(0, obstacle.Length);
-       Instantiate(obstacle[random],transform.position, Quaternion.identity);
+        SpawnaObjeto(random);
+    }
+    [PunRPC]
+    private void SpawnaObjeto(int random)
+    {
+        Instantiate(obstacle[random], transform.position, Quaternion.identity);
     }
 }

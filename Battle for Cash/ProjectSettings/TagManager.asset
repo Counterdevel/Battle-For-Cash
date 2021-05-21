@@ -4,22 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Ground
-  - GM
-  - Water
-  - Caixa
-  - Flag
-  - Destroy
-  - Plataforma
-  - PlayerFlag
-  - Socket
-  - Meleca
-  - Bullet
-<<<<<<< Updated upstream
-  - Sorvete
-=======
   - Parede
->>>>>>> Stashed changes
+  - Ground
+  - Plataforma
+  - Water
+  - Bullet
+  - Meleca
+  - Empurra
   layers:
   - Default
   - TransparentFX
@@ -29,7 +20,7 @@ TagManager:
   - UI
   - 
   - 
-  - UI2
+  - 
   - 
   - 
   - 

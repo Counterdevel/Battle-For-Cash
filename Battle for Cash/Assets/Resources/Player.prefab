@@ -62,7 +62,7 @@ Transform:
   - {fileID: 920414450102779546}
   - {fileID: 2199032498722677710}
   m_Father: {fileID: 8458665080319709422}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &913978790829898535
 GameObject:
@@ -94,7 +94,7 @@ Transform:
   m_LocalScale: {x: 0.21888767, y: 0.21888767, z: 0.21888767}
   m_Children: []
   m_Father: {fileID: 8458665080319709422}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &827669194338215859
 MonoBehaviour:
@@ -602,7 +602,7 @@ GameObject:
   - component: {fileID: 6672678793275954528}
   - component: {fileID: 6672678793275954531}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasJoyStick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1027,9 +1027,9 @@ GameObject:
   - component: {fileID: 8458665080319709416}
   - component: {fileID: 8503176244525884127}
   - component: {fileID: 8458665080319709423}
+  - component: {fileID: 3801764231014211786}
   - component: {fileID: 8422476569002056459}
   - component: {fileID: 6031633519227669258}
-  - component: {fileID: 3801764231014211786}
   - component: {fileID: 476523985}
   m_Layer: 0
   m_Name: Player
@@ -1051,8 +1051,8 @@ Transform:
   m_Children:
   - {fileID: 6672678793275954542}
   - {fileID: 5482438219983552136}
-  - {fileID: 5557996830488552986}
   - {fileID: 3988601043598680608}
+  - {fileID: 5557996830488552986}
   - {fileID: 1115095195}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1071,7 +1071,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &8458665080319709416
 CapsuleCollider:
@@ -1099,6 +1099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd3d1f87da71aea41a1ab4082f68e351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  photonview: {fileID: 0}
   playerName: {fileID: 1006456220103983891}
   saldo: 0
 --- !u!114 &8458665080319709423
@@ -1116,8 +1117,23 @@ MonoBehaviour:
   photonview: {fileID: 8422476569002056459}
   rbPlayer: {fileID: 8458665080319709417}
   playerspeed: 15
-  forcejump: 10
+  forcejump: 9
   isGround: 0
+--- !u!114 &3801764231014211786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8458665080319709419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a158e3623fd8447a4dd1b20859ec01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSelected: 0
+  PlayerList: {fileID: 597783794230080874}
+  myPlayerCanvas: {fileID: 6672678793275954530}
 --- !u!114 &8422476569002056459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,21 +1173,6 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 0
   m_TeleportEnabled: 0
   m_TeleportIfDistanceGreaterThan: 3
---- !u!114 &3801764231014211786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8458665080319709419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70a158e3623fd8447a4dd1b20859ec01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSelected: 0
-  PlayerList: {fileID: 597783794230080874}
-  myPlayerCanvas: {fileID: 6672678793275954530}
 --- !u!114 &476523985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1201,7 +1202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8458665080855714297
 Transform:
   m_ObjectHideFlags: 0

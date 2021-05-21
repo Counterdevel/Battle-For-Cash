@@ -64,7 +64,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
 
     public void CreateRoom()
     {
-        RoomOptions roomOptions = new RoomOptions() {MaxPlayers=4 };
+        RoomOptions roomOptions = new RoomOptions() {MaxPlayers = 4 };
         PhotonNetwork.JoinOrCreateRoom(roomNameInput.text, roomOptions, TypedLobby.Default);
     }
 
