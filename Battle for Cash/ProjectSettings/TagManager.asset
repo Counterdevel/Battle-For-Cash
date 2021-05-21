@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Parede
-  - Ground
-  - Plataforma
-  - Water
-  - Bullet
-  - Meleca
-  - Empurra
+  tags: []
   layers:
   - Default
   - TransparentFX
