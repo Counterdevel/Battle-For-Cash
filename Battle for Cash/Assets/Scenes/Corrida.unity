@@ -287,11 +287,15 @@ Transform:
   - {fileID: 194652226}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   m_RootOrder: 5
 =======
   m_RootOrder: 7
 >>>>>>> Stashed changes
+=======
+  m_RootOrder: 6
+>>>>>>> parent of f6060e0 (Otimizando)
 =======
   m_RootOrder: 6
 >>>>>>> parent of f6060e0 (Otimizando)
@@ -1551,11 +1555,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   m_RootOrder: 8
 =======
   m_RootOrder: 10
 >>>>>>> Stashed changes
+=======
+  m_RootOrder: 9
+>>>>>>> parent of f6060e0 (Otimizando)
 =======
   m_RootOrder: 9
 >>>>>>> parent of f6060e0 (Otimizando)
@@ -1672,11 +1680,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       value: 7
 =======
       value: 9
 >>>>>>> Stashed changes
+=======
+      value: 8
+>>>>>>> parent of f6060e0 (Otimizando)
 =======
       value: 8
 >>>>>>> parent of f6060e0 (Otimizando)
@@ -3530,11 +3542,15 @@ Transform:
   - {fileID: 543450653042754635}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   m_RootOrder: 3
 =======
   m_RootOrder: 5
 >>>>>>> Stashed changes
+=======
+  m_RootOrder: 4
+>>>>>>> parent of f6060e0 (Otimizando)
 =======
   m_RootOrder: 4
 >>>>>>> parent of f6060e0 (Otimizando)
@@ -4265,11 +4281,15 @@ Transform:
   - {fileID: 2002445362}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   m_RootOrder: 4
 =======
   m_RootOrder: 6
 >>>>>>> Stashed changes
+=======
+  m_RootOrder: 5
+>>>>>>> parent of f6060e0 (Otimizando)
 =======
   m_RootOrder: 5
 >>>>>>> parent of f6060e0 (Otimizando)
@@ -4380,11 +4400,15 @@ RectTransform:
   - {fileID: 909577676}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   m_RootOrder: 6
 =======
   m_RootOrder: 8
 >>>>>>> Stashed changes
+=======
+  m_RootOrder: 7
+>>>>>>> parent of f6060e0 (Otimizando)
 =======
   m_RootOrder: 7
 >>>>>>> parent of f6060e0 (Otimizando)
@@ -4609,6 +4633,7 @@ Transform:
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 --- !u!114 &1858015491 stripped
 MonoBehaviour:
@@ -4623,6 +4648,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 =======
+=======
+>>>>>>> parent of f6060e0 (Otimizando)
 =======
 >>>>>>> parent of f6060e0 (Otimizando)
 --- !u!1001 &1812339232
@@ -4700,7 +4727,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 4
+=======
+      value: 3
+>>>>>>> parent of f6060e0 (Otimizando)
 =======
       value: 3
 >>>>>>> parent of f6060e0 (Otimizando)
@@ -4763,7 +4794,10 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e5a707150dc6954981a0d16b1bb1680, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of f6060e0 (Otimizando)
 =======
 >>>>>>> parent of f6060e0 (Otimizando)
 --- !u!1001 &1902926780
