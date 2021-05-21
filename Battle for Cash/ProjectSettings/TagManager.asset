@@ -3,7 +3,27 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags: []
+=======
+  tags:
+  - Ground
+  - GM
+  - Water
+  - Caixa
+  - Flag
+  - Destroy
+  - Plataforma
+  - PlayerFlag
+  - Socket
+  - Meleca
+  - Bullet
+<<<<<<< Updated upstream
+  - Sorvete
+=======
+  - Parede
+>>>>>>> Stashed changes
+>>>>>>> parent of f6060e0 (Otimizando)
   layers:
   - Default
   - TransparentFX
@@ -13,7 +33,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - UI2
   - 
   - 
   - 

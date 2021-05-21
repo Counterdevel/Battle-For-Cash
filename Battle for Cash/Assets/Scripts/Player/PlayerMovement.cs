@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float playerspeed, forcejump; 
     public bool isGround;
 
-    Vector3 direction;
+    Vector3 direction, rotate;
     void Start()
     {
         playerspeed = 15;
@@ -37,11 +37,10 @@ public class PlayerMovement : MonoBehaviour
     }
     void Rotation()
     {
-        //if(direction != Vector3.zero)
-        //{
-        //    transform.rotation = Quaternion.LookRotation(direction);
-        //}
-        
+        if(direction != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(direction);
+        }
         transform.Translate(direction * (playerspeed * Time.deltaTime), Space.World);
     }
 
@@ -72,11 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            playerspeed = 5;
-            rbPlayer.freezeRotation = false;
-        }
-        if (collision.gameObject.CompareTag("Empurra"))
-        {
+            playerspeed = 0;
             rbPlayer.freezeRotation = false;
         }
     }
@@ -94,17 +89,9 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("Plataforma"))
-        {
             this.transform.parent = null;
-        } 
         if (collision.gameObject.CompareTag("Meleca"))
-        {
             playerspeed = 15;
-        }
-        if (collision.gameObject.CompareTag("Empurra"))
-        {
-            rbPlayer.freezeRotation = true;
-        }
         
     }
 }

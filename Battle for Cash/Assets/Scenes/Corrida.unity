@@ -167,7 +167,7 @@ PrefabInstance:
     - target: {fileID: 4124608183279439238, guid: fa45dc8b92f8bf044b8ffaa54b73bb1f,
         type: 3}
       propertyPath: m_TagString
-      value: Empurra
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7699807662707393218, guid: fa45dc8b92f8bf044b8ffaa54b73bb1f,
         type: 3}
@@ -286,11 +286,15 @@ Transform:
   - {fileID: 5436237}
   - {fileID: 194652226}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   m_RootOrder: 5
 =======
   m_RootOrder: 7
 >>>>>>> Stashed changes
+=======
+  m_RootOrder: 6
+>>>>>>> parent of f6060e0 (Otimizando)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &109734132
 GameObject:
@@ -317,18 +321,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109734132}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7bd40088921d9a4cb838b51ab2b5bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
   playersvencedores: []
-  panel: {fileID: 736744508}
-  quartoLugar: {fileID: 1858015491}
-  terceiroLugar: {fileID: 2118424775}
-  segundoLugar: {fileID: 561628789}
-  primeiroLugar: {fileID: 875845572}
+  panel: {fileID: 0}
+  quartoLugar: {fileID: 0}
+  terceiroLugar: {fileID: 0}
+  segundoLugar: {fileID: 0}
+  primeiroLugar: {fileID: 0}
 --- !u!65 &109734134
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -816,7 +820,7 @@ PrefabInstance:
     - target: {fileID: 4124608183279439238, guid: fa45dc8b92f8bf044b8ffaa54b73bb1f,
         type: 3}
       propertyPath: m_TagString
-      value: Empurra
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7699807662707393218, guid: fa45dc8b92f8bf044b8ffaa54b73bb1f,
         type: 3}
@@ -1424,18 +1428,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b4f4e0b5b9df764e9c00f7bb201483c, type: 3}
---- !u!114 &561628789 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 720764873, guid: c45d6d1e8b6e5a74d9da635d60cf03aa,
-    type: 3}
-  m_PrefabInstance: {fileID: 622779478}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &576388125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1558,11 +1550,15 @@ Transform:
   m_LocalScale: {x: 1.0275, y: 1.0275, z: 1.0275}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   m_RootOrder: 8
 =======
   m_RootOrder: 10
 >>>>>>> Stashed changes
+=======
+  m_RootOrder: 9
+>>>>>>> parent of f6060e0 (Otimizando)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &586011009
 MonoBehaviour:
@@ -1675,11 +1671,15 @@ PrefabInstance:
     - target: {fileID: 2993078333118726156, guid: c45d6d1e8b6e5a74d9da635d60cf03aa,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       value: 7
 =======
       value: 9
 >>>>>>> Stashed changes
+=======
+      value: 8
+>>>>>>> parent of f6060e0 (Otimizando)
       objectReference: {fileID: 0}
     - target: {fileID: 2993078333118726156, guid: c45d6d1e8b6e5a74d9da635d60cf03aa,
         type: 3}
@@ -2245,12 +2245,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677868520}
   m_Mesh: {fileID: -5309660977325055044, guid: a3a1f15bb6546bc45bb252ef75fb4b2d, type: 3}
---- !u!1 &736744508 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 263364337, guid: c45d6d1e8b6e5a74d9da635d60cf03aa,
-    type: 3}
-  m_PrefabInstance: {fileID: 622779478}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &745129775
 GameObject:
   m_ObjectHideFlags: 0
@@ -2582,7 +2576,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822194335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5373.9565, y: 5827.4673, z: -722.3}
+  m_LocalPosition: {x: 5373.9565, y: 5827.4673, z: -723.25934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 56695976}
@@ -2788,18 +2782,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839287745}
   m_Mesh: {fileID: 5761106432924065067, guid: a3a1f15bb6546bc45bb252ef75fb4b2d, type: 3}
---- !u!114 &875845572 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1587408020, guid: c45d6d1e8b6e5a74d9da635d60cf03aa,
-    type: 3}
-  m_PrefabInstance: {fileID: 622779478}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &886340574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2933035177720811518, guid: 909e23c54f5bf8546a056160d04bde5d,
@@ -3547,11 +3529,15 @@ Transform:
   - {fileID: 148059914}
   - {fileID: 543450653042754635}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   m_RootOrder: 3
 =======
   m_RootOrder: 5
 >>>>>>> Stashed changes
+=======
+  m_RootOrder: 4
+>>>>>>> parent of f6060e0 (Otimizando)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1339416529
 GameObject:
@@ -4278,11 +4264,15 @@ Transform:
   - {fileID: 587164718}
   - {fileID: 2002445362}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   m_RootOrder: 4
 =======
   m_RootOrder: 6
 >>>>>>> Stashed changes
+=======
+  m_RootOrder: 5
+>>>>>>> parent of f6060e0 (Otimizando)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1655860846
 GameObject:
@@ -4389,11 +4379,15 @@ RectTransform:
   m_Children:
   - {fileID: 909577676}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   m_RootOrder: 6
 =======
   m_RootOrder: 8
 >>>>>>> Stashed changes
+=======
+  m_RootOrder: 7
+>>>>>>> parent of f6060e0 (Otimizando)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4614,6 +4608,7 @@ Transform:
   m_Father: {fileID: 1641278936}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 --- !u!114 &1858015491 stripped
 MonoBehaviour:
@@ -4628,6 +4623,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 =======
+=======
+>>>>>>> parent of f6060e0 (Otimizando)
 --- !u!1001 &1812339232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4702,7 +4699,11 @@ PrefabInstance:
     - target: {fileID: 8458665080319709422, guid: 1e5a707150dc6954981a0d16b1bb1680,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 4
+=======
+      value: 3
+>>>>>>> parent of f6060e0 (Otimizando)
       objectReference: {fileID: 0}
     - target: {fileID: 8458665080319709422, guid: 1e5a707150dc6954981a0d16b1bb1680,
         type: 3}
@@ -4761,7 +4762,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e5a707150dc6954981a0d16b1bb1680, type: 3}
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of f6060e0 (Otimizando)
 --- !u!1001 &1902926780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5460,18 +5464,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069695836}
   m_Mesh: {fileID: -1320710736027503050, guid: a3a1f15bb6546bc45bb252ef75fb4b2d, type: 3}
---- !u!114 &2118424775 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1320725552, guid: c45d6d1e8b6e5a74d9da635d60cf03aa,
-    type: 3}
-  m_PrefabInstance: {fileID: 622779478}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &41332895370767031
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7131,7 +7123,7 @@ PrefabInstance:
     - target: {fileID: 4124608183279439238, guid: fa45dc8b92f8bf044b8ffaa54b73bb1f,
         type: 3}
       propertyPath: m_TagString
-      value: Empurra
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7699807662707393218, guid: fa45dc8b92f8bf044b8ffaa54b73bb1f,
         type: 3}

@@ -14,20 +14,17 @@ public class PlayerSelect : MonoBehaviour
     private void Start()
     {
         photonView = this.GetComponent<PhotonView>();
-
         if (!photonView.IsMine)
         {
             myPlayerCanvas.gameObject.SetActive(false);
         }
-
         playerSelected = PlayerPrefs.GetInt("HERO");
         SwitchPlayer();
     }
     public void SwitchPlayer()
     {
-        photonView.RPC("SwitchPlayerRPC", RpcTarget.AllBuffered);
+        photonView.RPC("SwitchPlayerRPC", RpcTarget.AllBufferedViaServer);
     }
-
     [PunRPC]
     public void SwitchPlayerRPC()
     {
@@ -45,5 +42,6 @@ public class PlayerSelect : MonoBehaviour
             }
             i++;
         }
+
     }
 }
