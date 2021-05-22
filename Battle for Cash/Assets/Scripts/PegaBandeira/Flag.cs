@@ -19,10 +19,10 @@ public class Flag : MonoBehaviour
     bool pink = false;
     bool black = false;
 
-    public GameObject GreenSocket;
-    public GameObject BlueSocket;
-    public GameObject PinkSocket;
-    public GameObject BlackSocket;
+    public GameObject greenSocket;
+    public GameObject blueSocket;
+    public GameObject pinkSocket;
+    public GameObject blackSocket;
 
     private void Start()
     {
@@ -35,46 +35,30 @@ public class Flag : MonoBehaviour
         if(other.CompareTag("Green"))
         {
             green = true;
+            gameObject.transform.position = greenSocket.transform.position;
+            gameObject.transform.rotation = greenSocket.transform.rotation;
+            gameObject.transform.parent = greenSocket.transform;
         }
         if (other.CompareTag("Blue"))
         {
             blue = true;
+            gameObject.transform.position = blueSocket.transform.position;
+            gameObject.transform.rotation = blueSocket.transform.rotation;
+            gameObject.transform.parent = blueSocket.transform;
         }
         if (other.CompareTag("Pink"))
         {
             pink = true;
+            gameObject.transform.position = pinkSocket.transform.position;
+            gameObject.transform.rotation = pinkSocket.transform.rotation;
+            gameObject.transform.parent = pinkSocket.transform;
         }
         if (other.CompareTag("Black"))
         {
             black = true;
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.collider.CompareTag("Player") && green == true)
-        {
-            gameObject.transform.position = GreenSocket.transform.position;
-            gameObject.transform.rotation = GreenSocket.transform.rotation;
-            gameObject.transform.parent = GreenSocket.transform;
-        }
-        if (collision.collider.CompareTag("Player") && blue == true)
-        {
-            gameObject.transform.position = BlueSocket.transform.position;
-            gameObject.transform.rotation = BlueSocket.transform.rotation;
-            gameObject.transform.parent = BlueSocket.transform;
-        }
-        if (collision.collider.CompareTag("Player") && pink == true)
-        {
-            gameObject.transform.position = PinkSocket.transform.position;
-            gameObject.transform.rotation = PinkSocket.transform.rotation;
-            gameObject.transform.parent = PinkSocket.transform;
-        }
-        if (collision.collider.CompareTag("Player") && black == true)
-        {
-            gameObject.transform.position = BlackSocket.transform.position;
-            gameObject.transform.rotation = BlackSocket.transform.rotation;
-            gameObject.transform.parent = BlackSocket.transform;
+            gameObject.transform.position = blackSocket.transform.position;
+            gameObject.transform.rotation = blackSocket.transform.rotation;
+            gameObject.transform.parent = blackSocket.transform;
         }
     }
 

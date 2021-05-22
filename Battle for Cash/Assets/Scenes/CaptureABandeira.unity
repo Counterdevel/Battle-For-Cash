@@ -435,10 +435,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf961fd2c2c1b2418ec41e65ed3ba99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GreenSocket: {fileID: 1772380083}
-  BlueSocket: {fileID: 122195010}
-  PinkSocket: {fileID: 1198878652}
-  BlackSocket: {fileID: 1558416310}
+  greenSocket: {fileID: 1772380083}
+  blueSocket: {fileID: 122195010}
+  pinkSocket: {fileID: 1198878652}
+  blackSocket: {fileID: 1558416310}
 --- !u!1001 &355721170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3266,7 +3266,7 @@ PrefabInstance:
     - target: {fileID: 2038548241435535420, guid: 06d731cf1ff41d84cbe8ac92725515da,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06d731cf1ff41d84cbe8ac92725515da, type: 3}
