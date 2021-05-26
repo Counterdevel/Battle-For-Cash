@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class RandomScene : MonoBehaviour
 {
-    static List<int> availableScenes =new List<int> { 1, 2, 3, 4, 5};
+    static List<int> availableScenes =new List<int> { 1, 2, 3};
 
     public void LoadNextScene()
     {
@@ -16,7 +16,7 @@ public class RandomScene : MonoBehaviour
         if (availableScenes.Count == 0)
             {
             Debug.Log("Acabou as fases, recomeçando");
-            availableScenes = new List<int> { 1, 2, 3, 4, 5 };
+            availableScenes = new List<int> { 1, 2, 3};
         }
     }
 }
