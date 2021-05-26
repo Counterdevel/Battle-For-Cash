@@ -19,8 +19,8 @@ public class SoundSettings : MonoBehaviour
 
         if(firstPlayInt == 0)
         {
-            musicafloat = .25f;
-            fxfloat = .25f;
+            musicafloat = .1f;
+            fxfloat = .1f;
             musicaslider.value = musicafloat;
             fxslider.value = fxfloat;
             PlayerPrefs.SetFloat(MusicaPref, musicafloat);

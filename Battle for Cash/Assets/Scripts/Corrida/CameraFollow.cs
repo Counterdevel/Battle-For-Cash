@@ -10,7 +10,6 @@ public class CameraFollow : MonoBehaviour
     public float speed;
     public Vector3 dist;
     public Transform lookTarget;
-    public GameObject player;
     public PhotonView photonview;
 
     private void Start()

@@ -427,7 +427,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Teste
+  m_Text: '
+
+'
 --- !u!1 &5869988376247174148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,7 +1238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd3d1f87da71aea41a1ab4082f68e351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  photonview: {fileID: 0}
+  photonview: {fileID: 8422476569002056459}
   playerName: {fileID: 1006456220103983891}
   saldo: 0
 --- !u!114 &8458665080319709423

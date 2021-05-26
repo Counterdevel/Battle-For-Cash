@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class NetworkController : MonoBehaviourPunCallbacks
 {
+    string gameVersion = "1";
+
     [Header("LOGIN")]
     public GameObject loginPn;
     public InputField playerNameInput;
@@ -25,11 +27,15 @@ public class NetworkController : MonoBehaviourPunCallbacks
     public GameObject SelecaoDePersonagem;
     public GameObject canvasTelaInicial;
 
+    private void Awake()
+    {
+        PhotonNetwork.AutomaticallySyncScene = true;
+    }
     void Start()
     {
-        loginPn.transform.localPosition = new Vector2(700, 0);
-        btnVoltar.transform.localPosition = new Vector2(-300, 0);
-        lobbyPn.transform.localPosition = new Vector2(0, 500);
+        loginPn.transform.localPosition = new Vector2(-1000, 0);
+        btnVoltar.transform.localPosition = new Vector2(-500, 0);
+        lobbyPn.transform.localPosition = new Vector2(0, 1000);
         SelecaoDePersonagem.transform.LeanScale(Vector2.zero, 0f);
 
         tempPlayerName = "User" + Random.Range(1, 20);
@@ -37,13 +43,13 @@ public class NetworkController : MonoBehaviourPunCallbacks
 
         tempRoomName = "Sala" + Random.Range(1, 5);
     }
-
     //######## Minhas Funções ##################
     public void Login()
     {
         PhotonNetwork.ConnectUsingSettings();
+        PhotonNetwork.GameVersion = gameVersion;
 
-        if(playerNameInput.text != "")
+        if (playerNameInput.text != "")
         {
             PhotonNetwork.NickName = playerNameInput.text;
         }
@@ -64,7 +70,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
 
     public void CreateRoom()
     {
-        RoomOptions roomOptions = new RoomOptions() {MaxPlayers = 4 };
+        RoomOptions roomOptions = new RoomOptions() { MaxPlayers = 4 };
         PhotonNetwork.JoinOrCreateRoom(roomNameInput.text, roomOptions, TypedLobby.Default);
     }
 
@@ -101,14 +107,21 @@ public class NetworkController : MonoBehaviourPunCallbacks
         Debug.LogWarning("Nome da Player: " + PhotonNetwork.NickName);
         Debug.LogWarning("Players Conectados: " + PhotonNetwork.CurrentRoom.PlayerCount);
 
+        
         lobbyPn.transform.localPosition = new Vector2(0, 500);
 
         canvasTelaInicial.SetActive(false);
 
         Vector3 pos = new Vector3(Random.Range(-20, 20), playerPUN.transform.position.y, Random.Range(-20, 20));
         PhotonNetwork.Instantiate(playerPUN.name, pos, playerPUN.transform.rotation, 0);
-    }
 
+        if(PhotonNetwork.CurrentRoom.PlayerCount == 2)
+        {
+            Debug.Log("Carregou a Cena");
+            PhotonNetwork.LoadLevel("ChuvaDeCaixa");
+        }
+
+    }
     public void ClicouJogar()
     {
         SelecaoDePersonagem.gameObject.SetActive(true);
