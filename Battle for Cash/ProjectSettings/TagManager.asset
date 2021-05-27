@@ -11,6 +11,17 @@ TagManager:
   - Bullet
   - Meleca
   - Empurra
+  - Sorvete
+  - PlayerFlag
+  - Flag
+  - Blue
+  - Black
+  - Pink
+  - Green
+  - GreenSocket
+  - BlueSocket
+  - PinkSocket
+  - BlackSocket
   layers:
   - Default
   - TransparentFX
