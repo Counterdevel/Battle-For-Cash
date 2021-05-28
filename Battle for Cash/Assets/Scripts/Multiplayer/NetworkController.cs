@@ -2,10 +2,10 @@
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
+using System.Collections;
 
 public class NetworkController : MonoBehaviourPunCallbacks
 {
-    string gameVersion = "1";
 
     [Header("LOGIN")]
     public GameObject loginPn;
@@ -26,11 +26,12 @@ public class NetworkController : MonoBehaviourPunCallbacks
     public GameObject btnVoltar;
     public GameObject SelecaoDePersonagem;
     public GameObject canvasTelaInicial;
-
+    public Text mensagem;
     private void Awake()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
     }
+
     void Start()
     {
         loginPn.transform.localPosition = new Vector2(-1000, 0);
@@ -47,7 +48,6 @@ public class NetworkController : MonoBehaviourPunCallbacks
     public void Login()
     {
         PhotonNetwork.ConnectUsingSettings();
-        PhotonNetwork.GameVersion = gameVersion;
 
         if (playerNameInput.text != "")
         {
@@ -73,8 +73,26 @@ public class NetworkController : MonoBehaviourPunCallbacks
         RoomOptions roomOptions = new RoomOptions() { MaxPlayers = 4 };
         PhotonNetwork.JoinOrCreateRoom(roomNameInput.text, roomOptions, TypedLobby.Default);
     }
+    public void ExibePlayerEnter(string msg)
+    {
+        mensagem.gameObject.SetActive(true);
+        mensagem.text = msg;
+        StartCoroutine(WaitForHide(2f));
+    }
+    public void ExibePlayerExit(string msg)
+    {
+        mensagem.gameObject.SetActive(true);
+        mensagem.text = msg;
+        StartCoroutine(WaitForHide(2f));
+    }
 
-//############# PUN Callbacks ##################
+    IEnumerator WaitForHide(float time)
+    {
+        yield return new WaitForSeconds(time);
+        mensagem.gameObject.SetActive(false);
+    }
+
+    //############# PUN Callbacks ##################
     public override void OnConnected()
     {
         Debug.LogWarning("############# LOGIN #############");
@@ -107,7 +125,6 @@ public class NetworkController : MonoBehaviourPunCallbacks
         Debug.LogWarning("Nome da Player: " + PhotonNetwork.NickName);
         Debug.LogWarning("Players Conectados: " + PhotonNetwork.CurrentRoom.PlayerCount);
 
-        
         lobbyPn.transform.localPosition = new Vector2(0, 500);
 
         canvasTelaInicial.SetActive(false);
@@ -117,10 +134,16 @@ public class NetworkController : MonoBehaviourPunCallbacks
 
         if(PhotonNetwork.CurrentRoom.PlayerCount == 2)
         {
-            Debug.Log("Carregou a Cena");
             PhotonNetwork.LoadLevel("ChuvaDeCaixa");
         }
-
+    }
+    public override void OnPlayerEnteredRoom(Photon.Realtime.Player other)
+    {
+        ExibePlayerEnter(other.NickName + " Entrou na sala");
+    }
+    public override void OnPlayerLeftRoom(Photon.Realtime.Player other)
+    {
+        ExibePlayerExit(other.NickName + " Saiu da sala");
     }
     public void ClicouJogar()
     {
