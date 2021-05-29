@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: StylizedWater
+  m_Name: LavaRestaUm
   m_Shader: {fileID: -6465566751694194690, guid: 127ba78e97b5be34cba97b26a4a85915,
     type: 3}
   m_ShaderKeywords: 
@@ -62,14 +62,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_1ED7F1CE: 0.02
+    - Vector1_1ED7F1CE: 0.01
     - Vector1_594294C1: -2.39
-    - Vector1_8270AE25: 7.6
-    - Vector1_C5C0DFC7: 208.5
+    - Vector1_8270AE25: 2.57
+    - Vector1_C5C0DFC7: 0
     - Vector1_C6C83286: 0.1
     - Vector1_D2F30A6D: 1.07
-    - Vector1_F6EF5C15: 7.12
-    - Vector1_FF776554: 0.84
+    - Vector1_F6EF5C15: 1.8
+    - Vector1_FF776554: 0.76
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -92,9 +92,9 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_6BC6A3FD: {r: 0.01713243, g: 0.114484884, b: 0.7264151, a: 0.40392157}
-    - Color_84790DEC: {r: 1, g: 1, b: 1, a: 1}
-    - Color_98DD0066: {r: 0, g: 0.8273995, b: 1, a: 0.31764707}
+    - Color_6BC6A3FD: {r: 1, g: 0.4678746, b: 0, a: 0.94509804}
+    - Color_84790DEC: {r: 0.8490566, g: 0.6845853, b: 0.54067284, a: 1}
+    - Color_98DD0066: {r: 0.5471698, g: 0.25253993, b: 0, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
