@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
     private VariableJoystick joystick;
     public Rigidbody rbPlayer;
 
+    public AudioSource audioSource;
+    public AudioClip[] fx;
+
     public float playerspeed, forcejump; 
     public bool isGround;
 
@@ -83,6 +86,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("WaterSom"))
+        {
+            audioSource.PlayOneShot(fx[0]);
+        }
+
         if (other.CompareTag("Water"))
         {
             playerspeed = 15;

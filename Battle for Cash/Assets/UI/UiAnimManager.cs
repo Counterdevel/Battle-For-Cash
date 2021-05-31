@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class UiAnimManager : MonoBehaviour
@@ -12,7 +13,8 @@ public class UiAnimManager : MonoBehaviour
     public GameObject SelecaoDePersonagemSingleplayer;
     public GameObject TipoDeGameplay;
     public GameObject nomePn;
-
+    public InputField playerNameInput;
+    string tempPlayerName;
     void Start()
     {
         btnVoltar.transform.localPosition = new Vector2(-500, 0);
@@ -20,6 +22,21 @@ public class UiAnimManager : MonoBehaviour
         SelecaoDePersonagemSingleplayer.transform.LeanScale(Vector2.zero, 0f);
         TipoDeGameplay.transform.LeanScale(Vector2.zero, 0f);
         nomePn.transform.localPosition = new Vector2(0, 500);
+
+        tempPlayerName = "Jogador";
+        playerNameInput.text = tempPlayerName;
+    }
+
+    public void NomePlayer()
+    {
+        if (playerNameInput.text != "")
+        {
+            PlayerPrefs.SetString("Nome",playerNameInput.text);
+        }
+        else
+        {
+            PlayerPrefs.SetString("Nome", tempPlayerName);
+        }
     }
     public void ClicouJogar()
     {

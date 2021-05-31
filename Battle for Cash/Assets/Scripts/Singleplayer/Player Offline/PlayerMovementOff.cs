@@ -7,6 +7,9 @@ public class PlayerMovementOff : MonoBehaviour
     private VariableJoystick joystick;
     public Rigidbody rbPlayer;
 
+    public AudioSource audioSource;
+    public AudioClip[] fx;
+
     public float playerspeed, forcejump; 
     public bool isGround;
 
@@ -76,8 +79,12 @@ public class PlayerMovementOff : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Water"))
+        if (other.CompareTag("WaterSom"))
         {
+            audioSource.PlayOneShot(fx[0]);
+        }
+        if (other.CompareTag("Water"))
+        {  
             playerspeed = 15;
             rbPlayer.freezeRotation = true;
             rbPlayer.velocity = Vector3.zero;
