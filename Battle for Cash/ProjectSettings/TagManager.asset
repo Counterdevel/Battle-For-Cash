@@ -11,6 +11,8 @@ TagManager:
   - Bullet
   - Meleca
   - Empurra
+  - Caixa
+  - PurpleNPC
   layers:
   - Default
   - TransparentFX

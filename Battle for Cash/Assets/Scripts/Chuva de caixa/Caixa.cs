@@ -12,5 +12,10 @@ public class Caixa : MonoBehaviour
             other.gameObject.SetActive(false);
             GameManagerCaiCaixa.Instance.ranking(other.gameObject);
         }
+        if (other.CompareTag("PurpleNPC"))
+        {
+            other.gameObject.SetActive(false);
+            GameManagerCaiCaixa.Instance.ranking(other.gameObject);
+        }
     }
 }
