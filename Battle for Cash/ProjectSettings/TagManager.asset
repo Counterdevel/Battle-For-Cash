@@ -13,6 +13,8 @@ TagManager:
   - Empurra
   - Caixa
   - PurpleNPC
+  - Destroy
+  - WaterSom
   layers:
   - Default
   - TransparentFX

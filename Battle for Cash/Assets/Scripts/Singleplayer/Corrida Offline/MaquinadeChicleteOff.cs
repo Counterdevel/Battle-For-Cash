@@ -6,6 +6,7 @@ public class MaquinadeChicleteOff : MonoBehaviour
 {
     public GameObject prefabBala;
     public float tempoderepetição;
+    public AudioSource somTiro;
     void Start()
     {
         InvokeRepeating("disparaBala",0, tempoderepetição);
@@ -13,5 +14,6 @@ public class MaquinadeChicleteOff : MonoBehaviour
     void disparaBala()
     {
         Instantiate(prefabBala,transform.position, transform.rotation);
+        somTiro.Play();
     }
 }
