@@ -42,7 +42,7 @@ public class NPC : MonoBehaviour
         {
             destination = new Vector3(Random.Range(20, -20), 0.06755352f, Random.Range(12, -16));
         }
-        if(collision.collider.CompareTag("Caixa"))
+        if(collision.collider.CompareTag("Parede"))
         {
             destination = new Vector3(Random.Range(20, -20), 0.06755352f, Random.Range(12, -16));
         }
