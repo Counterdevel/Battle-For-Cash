@@ -8,12 +8,17 @@ public class PlayerOff: MonoBehaviour
 {
     public Text playerName;
     public int saldo = 0;
+    public bool isNPC;
     String Nome;
     void Start()
     {
-        Nome = PlayerPrefs.GetString("Nome");
-        playerName.text = Nome;
-        gameObject.name = playerName.text;
+        if(isNPC == false)
+        {
+            Nome = PlayerPrefs.GetString("Nome");
+            playerName.text = Nome;
+            gameObject.name = playerName.text;
+        }
+
         saldo = PlayerPrefs.GetInt("saldoPrefs");
     }
 

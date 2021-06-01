@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 
-public class GameManagerCaiCaixa : MonoBehaviour
+public class GameManagerCaiCaixaOff : MonoBehaviour
 {
 
     int allplayers;
@@ -17,7 +17,7 @@ public class GameManagerCaiCaixa : MonoBehaviour
     public Text segundoLugar;
     public Text primeiroLugar;
 
-    public static GameManagerCaiCaixa Instance;
+    public static GameManagerCaiCaixaOff Instance;
 
     private void Awake()
     {
@@ -30,12 +30,7 @@ public class GameManagerCaiCaixa : MonoBehaviour
     void Start()
     {
         players.AddRange(GameObject.FindGameObjectsWithTag("Player"));
-        allplayers = players.Count;
-        if (allplayers == 4)
-        {
-            gameObject.GetComponent<ChuvaDeCaixa>().enabled = true;
-        }
-       
+        allplayers = players.Count;     
     }
     void Update()
     {
@@ -54,20 +49,20 @@ public class GameManagerCaiCaixa : MonoBehaviour
         if(allplayers == 1)
         {
             quartoLugar.text = playerseliminados[0].name;
-            playerseliminados[0].GetComponent<Player>().saldo += 0;
-            playerseliminados[0].GetComponent<Player>().atualizaSaldo();
+            playerseliminados[0].GetComponent<PlayerOff>().saldo += 0;
+            playerseliminados[0].GetComponent<PlayerOff>().atualizaSaldo();
 
             terceiroLugar.text = playerseliminados[1].name;
-            playerseliminados[1].GetComponent<Player>().saldo += 5;
-            playerseliminados[1].GetComponent<Player>().atualizaSaldo();
+            playerseliminados[1].GetComponent<PlayerOff>().saldo += 5;
+            playerseliminados[1].GetComponent<PlayerOff>().atualizaSaldo();
 
             segundoLugar.text = playerseliminados[2].name;
-            playerseliminados[2].GetComponent<Player>().saldo += 10;
-            playerseliminados[2].GetComponent<Player>().atualizaSaldo();
+            playerseliminados[2].GetComponent<PlayerOff>().saldo += 10;
+            playerseliminados[2].GetComponent<PlayerOff>().atualizaSaldo();
 
             primeiroLugar.text = players[0].name;
-            players[0].GetComponent<Player>().saldo += 20;
-            players[0].GetComponent<Player>().atualizaSaldo();
+            players[0].GetComponent<PlayerOff>().saldo += 20;
+            players[0].GetComponent<PlayerOff>().atualizaSaldo();
         }
     }
 
