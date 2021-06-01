@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NPC : MonoBehaviour
+public class NPCResta : MonoBehaviour
 {
     NavMeshAgent agent;
 
@@ -15,8 +15,8 @@ public class NPC : MonoBehaviour
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-
-        destination = new Vector3(Random.Range(20, -20), 0.06755352f, Random.Range(12, -16));
+        
+        destination = new Vector3(Random.Range(-33.9f, 34), 9.58f, Random.Range(23, -19));
     }
 
     private void Update()
@@ -28,23 +28,19 @@ public class NPC : MonoBehaviour
     {
         agent.SetDestination(destination);
         distance = Vector3.Distance(destination, transform.position);
-        
+
         if (distance < 5f)
         {
-            destination = new Vector3(Random.Range(20, -20), 0.06755352f, Random.Range(12, -16));
+            destination = new Vector3(Random.Range(-33.9f, 34), 9.58f, Random.Range(23, -19));
             chegou = true;
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.CompareTag("Caixa"))
+        if (collision.collider.CompareTag("Parede"))
         {
-            destination = new Vector3(Random.Range(20, -20), 0.06755352f, Random.Range(12, -16));
-        }
-        if(collision.collider.CompareTag("Parede"))
-        {
-            destination = new Vector3(Random.Range(20, -20), 0.06755352f, Random.Range(12, -16));
+            destination = new Vector3(Random.Range(-33.9f, 34), 9.58f, Random.Range(23, -19));
         }
     }
 }

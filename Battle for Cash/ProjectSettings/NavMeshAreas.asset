@@ -12,9 +12,9 @@ NavMeshProjectSettings:
   - name: Jump
     cost: 2
   - name: Caixa
-    cost: 20
-  - name: 
-    cost: 1
+    cost: 100
+  - name: Parede
+    cost: 100
   - name: 
     cost: 1
   - name: 
