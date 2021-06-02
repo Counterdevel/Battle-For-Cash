@@ -15,8 +15,8 @@ public class NPCResta : MonoBehaviour
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        
-        destination = new Vector3(Random.Range(-33.9f, 34), 9.58f, Random.Range(23, -19));
+
+        destination = new Vector3(Random.Range(-34, 34), 10, Random.Range(24, -19));
     }
 
     private void Update()
@@ -31,16 +31,8 @@ public class NPCResta : MonoBehaviour
 
         if (distance < 5f)
         {
-            destination = new Vector3(Random.Range(-33.9f, 34), 9.58f, Random.Range(23, -19));
+            destination = new Vector3(Random.Range(-34, 34), 10, Random.Range(24, -19));
             chegou = true;
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.CompareTag("Parede"))
-        {
-            destination = new Vector3(Random.Range(-33.9f, 34), 9.58f, Random.Range(23, -19));
         }
     }
 }
