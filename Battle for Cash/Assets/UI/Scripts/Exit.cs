@@ -26,7 +26,6 @@ public class Exit : MonoBehaviour
                     panelexit.SetActive(true);
                     Open();
 
-
                 }
             }
         }

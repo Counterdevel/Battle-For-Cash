@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class RandomSceneOff : MonoBehaviour
 {
     static List<int> availableScenes =new List<int> { 4, 5, 6};
+    bool segundarodada = false;
 
     public void LoadNextScene()
     {
@@ -14,9 +15,14 @@ public class RandomSceneOff : MonoBehaviour
         availableScenes.Remove(theSceneIndex);
         SceneManager.LoadScene(theSceneIndex);
         if (availableScenes.Count == 0)
-            {
+        {
+            availableScenes = new List<int> { 4, 5, 6 };
             Debug.Log("Acabou as fases, recomeçando");
-            availableScenes = new List<int> { 1, 2, 3};
+            segundarodada = true;
+        }
+        if (availableScenes.Count == 0 && segundarodada == true)
+        {
+            SceneManager.LoadScene(7);
         }
     }
 }

@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SinglePlayerMaps/RestaUmOffline.unity
     guid: 2c2ebafa0049ea94388d7b4ca856bbe1
+  - enabled: 1
+    path: Assets/Scenes/Tela Final.unity
+    guid: dbd2254377e46d347aeb018eb25fda3c
   m_configObjects: {}
