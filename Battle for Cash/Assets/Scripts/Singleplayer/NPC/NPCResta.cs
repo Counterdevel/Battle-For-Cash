@@ -5,34 +5,44 @@ using UnityEngine.AI;
 
 public class NPCResta : MonoBehaviour
 {
-    NavMeshAgent agent;
-
-    float distance;
-    Vector3 destination;
-
-    public bool chegou = false;
+    public float speed = 1;  
+    private float timer = 0f;      
+    private Vector3 direcao;
 
     private void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-
-        destination = new Vector3(Random.Range(-34, 34), 10, Random.Range(24, -19));
+        transform.eulerAngles = new Vector3(0, Random.Range(0, 360), 0);
     }
 
-    private void Update()
+    void Update()
     {
-        Run();
-    }
-
-    public void Run()
-    {
-        agent.SetDestination(destination);
-        distance = Vector3.Distance(destination, transform.position);
-
-        if (distance < 5f)
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 10))
         {
-            destination = new Vector3(Random.Range(-34, 34), 10, Random.Range(24, -19));
-            chegou = true;
+            if(hit.transform.name == "parede")
+            {
+                transform.eulerAngles = new Vector3(0, Random.Range(0, 360), 0);
+            }
+        }
+
+        if (timer <= 0)
+        {
+            timer = 2f;
+
+            transform.eulerAngles = new Vector3(0, Random.Range(0, 360), 0);
+        }
+        timer -= Time.deltaTime;
+
+        transform.Translate(transform.forward * speed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Parede"))
+        {
+            Debug.Log("paredou");
+
+            transform.eulerAngles = new Vector3(0, 180, 0);
         }
     }
 }
