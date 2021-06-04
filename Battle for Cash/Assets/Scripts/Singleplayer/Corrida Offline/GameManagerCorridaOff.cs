@@ -59,6 +59,14 @@ public class GameManagerCorridaOff : MonoBehaviour
             primeiroLugar.text = playersvencedores[0].name;
             playersvencedores[0].GetComponent<PlayerOff>().saldo += 20;
             playersvencedores[0].GetComponent<PlayerOff>().atualizaSaldo();
+
+            StartCoroutine(AcabouJogo(20f));
         }
+    }
+
+    IEnumerator AcabouJogo(float someParameter)
+    {
+        yield return null;
+        RandomSceneOff.LoadNextScene();
     }
 }

@@ -225,7 +225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &46966551
 AudioSource:
   m_ObjectHideFlags: 0
@@ -331,23 +331,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 46966550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b934e813e0fd5644698aa28c6a22413d, type: 3}
+  m_Script: {fileID: 11500000, guid: 53486ab43f09b5645ac6563acc38d6f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicaslider: {fileID: 0}
-  fxslider: {fileID: 0}
   musicaAudio: {fileID: 46966551}
   fxAudio:
   - {fileID: 829258563}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!4 &46966553
 Transform:
   m_ObjectHideFlags: 0
@@ -715,6 +704,7 @@ GameObject:
   - component: {fileID: 1042335392}
   - component: {fileID: 1042335394}
   - component: {fileID: 1042335393}
+  - component: {fileID: 1042335395}
   m_Layer: 5
   m_Name: Text (1)
   m_TagString: Untagged
@@ -773,7 +763,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Voc\xEA ganhou R$80,00 nesta partida!"
+  m_Text: 
 --- !u!222 &1042335394
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -782,6 +772,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042335391}
   m_CullTransparentMesh: 0
+--- !u!114 &1042335395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042335391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f311228bfd37a7f4492ad9862158760b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1042335393}
 --- !u!1 &1221445084
 GameObject:
   m_ObjectHideFlags: 0

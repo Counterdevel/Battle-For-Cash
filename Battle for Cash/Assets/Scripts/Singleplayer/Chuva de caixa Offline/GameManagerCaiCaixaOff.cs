@@ -36,7 +36,7 @@ public class GameManagerCaiCaixaOff : MonoBehaviour
     {
        if(allplayers == 1)
         {
-            panel.SetActive(true);
+            panel.SetActive(true);                   
         }
     }
 
@@ -63,7 +63,13 @@ public class GameManagerCaiCaixaOff : MonoBehaviour
             primeiroLugar.text = players[0].name;
             players[0].GetComponent<PlayerOff>().saldo += 20;
             players[0].GetComponent<PlayerOff>().atualizaSaldo();
+
+            StartCoroutine(AcabouJogo(20f));
         }
     }
-
+    IEnumerator AcabouJogo(float someParameter)
+    {
+        yield return null;
+        RandomSceneOff.LoadNextScene();
+    }
 }
