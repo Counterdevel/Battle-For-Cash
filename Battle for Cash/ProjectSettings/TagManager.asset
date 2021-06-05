@@ -15,6 +15,7 @@ TagManager:
   - PurpleNPC
   - Destroy
   - WaterSom
+  - Jump
   layers:
   - Default
   - TransparentFX
