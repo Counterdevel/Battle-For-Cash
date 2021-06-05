@@ -5,34 +5,45 @@ using UnityEngine.AI;
 
 public class NPCResta : MonoBehaviour
 {
-    public GameObject pontoInicial;
+    public float speed = 8f;
 
-    public float speed = 1;  
-    private float timer = 0f;
+    int randomIndex;
+    bool isGrounded;
 
-    public static bool borda = false;
+    public Transform[] wayPoint;
 
     private void Start()
     {
-        transform.eulerAngles = new Vector3(0, Random.Range(0, 360), 0);
+        randomIndex = Random.Range(0, wayPoint.Length);
     }
 
-    void Update()
+    private void Update()
     {
-        if (timer <= 0)
-        {
-            timer = 2f;
+        MoveRandom();
+    }
 
-            transform.eulerAngles = new Vector3(0, Random.Range(0, 360), 0);
+    public void MoveRandom()
+    {
+        float distance = Vector3.Distance(transform.position, wayPoint[randomIndex].position);
+
+        if(distance < 0.5f || isGrounded == false)
+        {
+            randomIndex = Random.Range(0, wayPoint.Length);
+            isGrounded = true;
         }
-        timer -= Time.deltaTime;
 
-        transform.Translate(transform.forward * speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, wayPoint[randomIndex].position, speed * Time.deltaTime);
+    }
 
-        if(borda == true)
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Ground"))
         {
-            transform.eulerAngles = new Vector3(0, pontoInicial.transform.position.x, 0);
-            borda = false;
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
         }
     }
 }
