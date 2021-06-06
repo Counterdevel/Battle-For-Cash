@@ -10,9 +10,11 @@ public class NPCCorrida : MonoBehaviour
     public Transform[] waypoint;
 
     public float jumpForce;
+    public float jumpSpeed;
+
     public float speed;
 
-    int index = 0;
+    public int index = 0;
 
     private void Start()
     {
@@ -28,9 +30,12 @@ public class NPCCorrida : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, waypoint[index].position);
 
-        if(distance < 0.5f)
+        if (distance < 3)
         {
-            index++;
+            if (index <= waypoint.Length)
+            {
+                index++;
+            }
         }
 
         transform.position = Vector3.MoveTowards(transform.position, waypoint[index].position, speed * Time.deltaTime);
@@ -41,6 +46,27 @@ public class NPCCorrida : MonoBehaviour
         if(other.CompareTag("Jump"))
         {
             rigidbody.AddForce(transform.up * jumpForce);
+            rigidbody.AddForce(transform.forward * jumpSpeed );
+        }
+        if(other.CompareTag("Water"))
+        {
+            index = 1;
+        }
+        if (other.CompareTag("Water2"))
+        {
+            index = 3;
+        }
+        if (other.CompareTag("Water3"))
+        {
+            index = 1;
+        }
+        if (other.CompareTag("Water4"))
+        {
+            index = 1;
+        }
+        if (other.CompareTag("Water5"))
+        {
+            index = 1;
         }
     }
 }
