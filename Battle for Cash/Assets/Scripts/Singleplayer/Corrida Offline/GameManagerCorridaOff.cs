@@ -26,6 +26,7 @@ public class GameManagerCorridaOff : MonoBehaviour
         if (allplayers == 1)
         {
             panel.SetActive(true);
+
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -60,13 +61,13 @@ public class GameManagerCorridaOff : MonoBehaviour
             playersvencedores[0].GetComponent<PlayerOff>().saldo += 20;
             playersvencedores[0].GetComponent<PlayerOff>().atualizaSaldo();
 
-            StartCoroutine(AcabouJogo(20f));
+            StartCoroutine(AcabouJogo(5f));
         }
     }
 
     IEnumerator AcabouJogo(float someParameter)
     {
-        yield return null;
+        yield return new WaitForSeconds(someParameter);
         RandomSceneOff.LoadNextScene();
     }
 }
