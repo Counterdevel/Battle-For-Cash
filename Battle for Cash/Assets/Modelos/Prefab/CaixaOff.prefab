@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 2906534302673593736}
   - component: {fileID: 4732151936765890364}
   - component: {fileID: 1090660909418868682}
-  - component: {fileID: 416654131080943499}
   - component: {fileID: 8343595906503163303}
   m_Layer: 0
   m_Name: CaixaOff
@@ -144,22 +143,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c1c89fb1d24483f40ae1044763c889fd, type: 3}
   - {fileID: 8300000, guid: f55c2531d64eb1b45ae75161e91bd2fb, type: 3}
   - {fileID: 8300000, guid: 705224760911cff4ebd8e6e7407bdd58, type: 3}
---- !u!208 &416654131080943499
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9042624737868894866}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1, y: 1, z: 1}
-  m_MoveThreshold: 0.1
-  m_Carve: 1
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!82 &8343595906503163303
 AudioSource:
   m_ObjectHideFlags: 0

@@ -5,46 +5,39 @@ using UnityEngine.AI;
 
 public class NPCCaixa : MonoBehaviour
 {
-    NavMeshAgent agent;
+    public Transform[] waypoints;
 
-    float distance;
-    Vector3 destination;
+    public float speed;
 
-    public bool chegou = false;
+    int index;
 
     private void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-
-        destination = new Vector3(Random.Range(20, -20), 0.06755352f, Random.Range(12, -16));
+        index = Random.Range(0, 88);
     }
 
     private void Update()
     {
-        Run();
+        MoveRandom();
     }
 
-    public void Run()
+    public void MoveRandom()
     {
-        agent.SetDestination(destination);
-        distance = Vector3.Distance(destination, transform.position);
-        
-        if (distance < 5f)
+        float distance = Vector3.Distance(transform.position, waypoints[index].position);
+
+        if(distance < 1)
         {
-            destination = new Vector3(Random.Range(20, -20), 0.06755352f, Random.Range(12, -16));
-            chegou = true;
+            index = Random.Range(0, 88);
         }
+
+        transform.position = Vector3.MoveTowards(transform.position, waypoints[index].position, speed * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.CompareTag("Caixa"))
+        if(collision.collider.CompareTag("Caixa") || collision.collider.CompareTag("Parede"))
         {
-            destination = new Vector3(Random.Range(20, -20), 0.06755352f, Random.Range(12, -16));
-        }
-        if(collision.collider.CompareTag("Parede"))
-        {
-            destination = new Vector3(Random.Range(20, -20), 0.06755352f, Random.Range(12, -16));
+            index = Random.Range(0, 88);
         }
     }
 }
