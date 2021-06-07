@@ -10,9 +10,9 @@ public class GameManagerCorridaOff : MonoBehaviour
     public List<GameObject> playersvencedores;
     [Header("UI Elements")]
     public GameObject panel;
-    public Text quartoLugar;
-    public Text terceiroLugar;
-    public Text segundoLugar;
+    //public Text quartoLugar;
+    //public Text terceiroLugar;
+    //public Text segundoLugar;
     public Text primeiroLugar;
 
     void Start()
@@ -23,10 +23,9 @@ public class GameManagerCorridaOff : MonoBehaviour
 
     private void Update()
     {
-        if (allplayers == 1)
+        if (allplayers == 3)
         {
             panel.SetActive(true);
-
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -43,8 +42,9 @@ public class GameManagerCorridaOff : MonoBehaviour
         players.Remove(playeratingindo);
         allplayers--;
 
-        if (allplayers == 1)
+        if (allplayers == 3)
         {
+            /*/
             quartoLugar.text = players[0].name;
             players[0].GetComponent<PlayerOff>().saldo += 0;
             players[0].GetComponent<PlayerOff>().atualizaSaldo();
@@ -56,7 +56,7 @@ public class GameManagerCorridaOff : MonoBehaviour
             segundoLugar.text = playersvencedores[1].name;
             playersvencedores[1].GetComponent<PlayerOff>().saldo += 10;
             playersvencedores[1].GetComponent<PlayerOff>().atualizaSaldo();
-
+            /*/
             primeiroLugar.text = playersvencedores[0].name;
             playersvencedores[0].GetComponent<PlayerOff>().saldo += 20;
             playersvencedores[0].GetComponent<PlayerOff>().atualizaSaldo();
@@ -68,6 +68,6 @@ public class GameManagerCorridaOff : MonoBehaviour
     IEnumerator AcabouJogo(float someParameter)
     {
         yield return new WaitForSeconds(someParameter);
-        RandomSceneOff.LoadNextScene();
+        RandomSceneOff.Instance.LoadNextScene();
     }
 }

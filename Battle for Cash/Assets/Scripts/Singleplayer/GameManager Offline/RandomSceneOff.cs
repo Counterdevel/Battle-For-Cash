@@ -6,7 +6,15 @@ using UnityEngine.SceneManagement;
 public class RandomSceneOff : MonoBehaviour
 {
     static List<int> availableScenes =new List<int> { 1, 2, 3};
-    public static void LoadNextScene()
+    public static RandomSceneOff Instance;
+    private void Awake()
+    {
+        if (!Instance)
+        {
+            Instance = this;
+        }
+    }
+    public void LoadNextScene()
     {
         int index = Random.Range(0, availableScenes.Count);
         int theSceneIndex = availableScenes[index];

@@ -70,6 +70,6 @@ public class GameManagerCaiCaixaOff : MonoBehaviour
     IEnumerator AcabouJogo(float someParameter)
     {
         yield return new WaitForSeconds(someParameter);
-        RandomSceneOff.LoadNextScene();
+        RandomSceneOff.Instance.LoadNextScene();
     }
 }

@@ -1521,7 +1521,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player
+  m_Text: BOT Pinky
 --- !u!222 &456877181
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2583,7 +2583,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587164716}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa57b2c480a18d44d99db45788588893, type: 3}
   m_Name: 
@@ -4282,7 +4282,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867395186}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47141061e2b5ce44fa35c46dc377c609, type: 3}
   m_Name: 
@@ -4290,9 +4290,6 @@ MonoBehaviour:
   players: []
   playersvencedores: []
   panel: {fileID: 1255140345}
-  quartoLugar: {fileID: 2027796500}
-  terceiroLugar: {fileID: 1844436308}
-  segundoLugar: {fileID: 456877180}
   primeiroLugar: {fileID: 1656627919}
 --- !u!65 &867395188
 BoxCollider:
@@ -6266,7 +6263,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339416529}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa57b2c480a18d44d99db45788588893, type: 3}
   m_Name: 
@@ -7491,7 +7488,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705023980}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa57b2c480a18d44d99db45788588893, type: 3}
   m_Name: 
@@ -7969,7 +7966,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player
+  m_Text: BOT Brown
 --- !u!222 &1844436309
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8959,7 +8956,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002445360}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa57b2c480a18d44d99db45788588893, type: 3}
   m_Name: 
@@ -9129,7 +9126,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player
+  m_Text: BOT Yellow
 --- !u!222 &2027796501
 CanvasRenderer:
   m_ObjectHideFlags: 0
