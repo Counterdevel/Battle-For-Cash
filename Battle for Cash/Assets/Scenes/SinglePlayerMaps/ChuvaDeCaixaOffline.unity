@@ -2571,7 +2571,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'BOT Laranja
+  m_Text: 'BOT Azul
 
 '
 --- !u!222 &499831064
@@ -2688,7 +2688,7 @@ GameObject:
   - component: {fileID: 537988489}
   - component: {fileID: 537988485}
   m_Layer: 0
-  m_Name: BOT Branco
+  m_Name: BOT Verde
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2859,7 +2859,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fb946bdd4ca4fb94f92a778d93848558, type: 2}
+  - {fileID: 2100000, guid: dd167e2f037de61489db7a32f9339278, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5434,7 +5434,7 @@ GameObject:
   - component: {fileID: 1119516669}
   - component: {fileID: 1119516665}
   m_Layer: 0
-  m_Name: BOT Laranja
+  m_Name: BOT Azul
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5605,7 +5605,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14a316b025ae7a348b5f0e2452d4d34b, type: 2}
+  - {fileID: 2100000, guid: cba8c71a33268ed49bfcf55b4d9d3a11, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7100,7 +7100,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'BOT Branco
+  m_Text: 'BOT Verde
 
 '
 --- !u!222 &1508080452
@@ -9979,10 +9979,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 329242869498775550, guid: 8245a2cccb59d764d80da2577fc52c3e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b23f78aeb25eeb54ba344ec63c9389cc, type: 2}
+    - target: {fileID: 1475859068835241409, guid: 8245a2cccb59d764d80da2577fc52c3e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4927771200071433679, guid: 8245a2cccb59d764d80da2577fc52c3e,
         type: 3}
       propertyPath: forcejump
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5318947392412392705, guid: 8245a2cccb59d764d80da2577fc52c3e,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8fc98175618371c45bd8cf4967bfe05e, type: 2}
+    - target: {fileID: 5318947392412392705, guid: 8245a2cccb59d764d80da2577fc52c3e,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5482438219983552136, guid: 8245a2cccb59d764d80da2577fc52c3e,
         type: 3}

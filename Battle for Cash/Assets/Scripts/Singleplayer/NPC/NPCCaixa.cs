@@ -5,6 +5,9 @@ using UnityEngine.AI;
 
 public class NPCCaixa : MonoBehaviour
 {
+    Animator animator;
+    Rigidbody rigibody;
+
     public Transform[] waypoints;
 
     public float speed;
@@ -13,12 +16,20 @@ public class NPCCaixa : MonoBehaviour
 
     private void Start()
     {
+        rigibody = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
+
         index = Random.Range(0, 88);
     }
 
     private void Update()
     {
         MoveRandom();
+
+        if(rigibody.velocity.magnitude > 0.2f)
+        {
+            animator.SetFloat("Speed", 0.2f);
+        }
     }
 
     public void MoveRandom()
