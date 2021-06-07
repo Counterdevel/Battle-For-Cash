@@ -40,4 +40,12 @@ public class NPCCaixa : MonoBehaviour
             index = Random.Range(0, 88);
         }
     }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.CompareTag("Caixa") || collision.collider.CompareTag("Parede"))
+        {
+            index = Random.Range(0, 88);
+        }
+    }
 }

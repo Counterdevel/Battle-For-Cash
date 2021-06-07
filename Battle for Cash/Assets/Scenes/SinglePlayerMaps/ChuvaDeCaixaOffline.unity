@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: ae4ef71bf15fceb47a66862cad95e4ee,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2688,7 +2688,7 @@ GameObject:
   - component: {fileID: 537988489}
   - component: {fileID: 537988485}
   m_Layer: 0
-  m_Name: WhiteNPC
+  m_Name: BOT Branco
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2702,7 +2702,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537988482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.310286, y: 5.5, z: -11.3}
+  m_LocalPosition: {x: 20, y: 5.5, z: -18}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 815528804}
@@ -5434,7 +5434,7 @@ GameObject:
   - component: {fileID: 1119516669}
   - component: {fileID: 1119516665}
   m_Layer: 0
-  m_Name: OrangeNPC
+  m_Name: BOT Laranja
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5448,7 +5448,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119516662}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.3097143, y: 5.5, z: -17.681133}
+  m_LocalPosition: {x: 20, y: 5.5, z: 12}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1822507459}
@@ -8449,7 +8449,7 @@ GameObject:
   - component: {fileID: 1862795358}
   - component: {fileID: 1862795354}
   m_Layer: 0
-  m_Name: PurpleNPC
+  m_Name: BOT Roxo
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8463,7 +8463,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862795351}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.7, y: 5.5, z: -11.3}
+  m_LocalPosition: {x: -20, y: 5.5, z: 12}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1718508253}
@@ -10012,7 +10012,7 @@ PrefabInstance:
     - target: {fileID: 8458665080319709422, guid: 8245a2cccb59d764d80da2577fc52c3e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.189714
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 8458665080319709422, guid: 8245a2cccb59d764d80da2577fc52c3e,
         type: 3}
@@ -10022,7 +10022,7 @@ PrefabInstance:
     - target: {fileID: 8458665080319709422, guid: 8245a2cccb59d764d80da2577fc52c3e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.2
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 8458665080319709422, guid: 8245a2cccb59d764d80da2577fc52c3e,
         type: 3}
