@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 8191ce67a872d634f826c79b7af5256e,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2922,6 +2922,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   box: {fileID: 474518820}
+  buttons:
+  - {fileID: 1128482394}
 --- !u!114 &474518818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3280,7 +3282,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e0a543b1150b99945a4f1689ea4f6e3a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.5
+      value: -26
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0a543b1150b99945a4f1689ea4f6e3a,
         type: 3}
@@ -6530,7 +6532,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e0a543b1150b99945a4f1689ea4f6e3a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.5
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0a543b1150b99945a4f1689ea4f6e3a,
         type: 3}
@@ -7010,7 +7012,7 @@ PrefabInstance:
     - target: {fileID: 8458665080319709422, guid: 8245a2cccb59d764d80da2577fc52c3e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.286015
+      value: -26
       objectReference: {fileID: 0}
     - target: {fileID: 8458665080319709422, guid: 8245a2cccb59d764d80da2577fc52c3e,
         type: 3}
@@ -7020,7 +7022,7 @@ PrefabInstance:
     - target: {fileID: 8458665080319709422, guid: 8245a2cccb59d764d80da2577fc52c3e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20.09371
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8458665080319709422, guid: 8245a2cccb59d764d80da2577fc52c3e,
         type: 3}
@@ -7059,6 +7061,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8245a2cccb59d764d80da2577fc52c3e, type: 3}
+--- !u!114 &1128482394 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6672678792126357903, guid: 8245a2cccb59d764d80da2577fc52c3e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1128482393}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1130625939
 GameObject:
   m_ObjectHideFlags: 0
@@ -7791,7 +7805,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e0a543b1150b99945a4f1689ea4f6e3a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.5
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0a543b1150b99945a4f1689ea4f6e3a,
         type: 3}
@@ -7801,7 +7815,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e0a543b1150b99945a4f1689ea4f6e3a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0a543b1150b99945a4f1689ea4f6e3a,
         type: 3}
@@ -10930,7 +10944,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1826923440}
   - component: {fileID: 1826923439}
-  - component: {fileID: 1826923438}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Untagged
@@ -10938,20 +10951,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1826923438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1826923437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53486ab43f09b5645ac6563acc38d6f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicaAudio: {fileID: 1826923439}
-  fxAudio: []
 --- !u!82 &1826923439
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10964,9 +10963,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5e9535c6e50e042469020bc7b830a74e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.07
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
