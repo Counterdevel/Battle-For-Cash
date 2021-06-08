@@ -14,7 +14,12 @@ public class RandomSceneOff : MonoBehaviour
             Instance = this;
         }
     }
-    public void LoadNextScene()
+
+    public void LoadScene(int scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+    public void LoadRandomScene()
     {
         int index = Random.Range(0, availableScenes.Count);
         int theSceneIndex = availableScenes[index];

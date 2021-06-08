@@ -49,20 +49,28 @@ public class GameManagerCaiCaixaOff : MonoBehaviour
         if(allplayers == 1)
         {
             quartoLugar.text = playerseliminados[0].name;
-            playerseliminados[0].GetComponent<PlayerOff>().saldo += 0;
-            playerseliminados[0].GetComponent<PlayerOff>().atualizaSaldo();
+            if (playerseliminados[0].GetComponent<PlayerOff>().isNPC == false)
+            {
+                playerseliminados[0].GetComponent<PlayerOff>().atualizaSaldo(0);
 
+            }
             terceiroLugar.text = playerseliminados[1].name;
-            playerseliminados[1].GetComponent<PlayerOff>().saldo += 5;
-            playerseliminados[1].GetComponent<PlayerOff>().atualizaSaldo();
+            if (playerseliminados[1].GetComponent<PlayerOff>().isNPC == false)
+            {
+                playerseliminados[1].GetComponent<PlayerOff>().atualizaSaldo(5);
+            }
 
             segundoLugar.text = playerseliminados[2].name;
-            playerseliminados[2].GetComponent<PlayerOff>().saldo += 10;
-            playerseliminados[2].GetComponent<PlayerOff>().atualizaSaldo();
+            if (playerseliminados[2].GetComponent<PlayerOff>().isNPC == false)
+            {
+                playerseliminados[2].GetComponent<PlayerOff>().atualizaSaldo(10);
+            }
 
             primeiroLugar.text = players[0].name;
-            players[0].GetComponent<PlayerOff>().saldo += 20;
-            players[0].GetComponent<PlayerOff>().atualizaSaldo();
+            if (players[0].GetComponent<PlayerOff>().isNPC == false)
+            {
+                players[0].GetComponent<PlayerOff>().atualizaSaldo(20);
+            }
 
             StartCoroutine(AcabouJogo(5f));
         }
@@ -70,6 +78,6 @@ public class GameManagerCaiCaixaOff : MonoBehaviour
     IEnumerator AcabouJogo(float someParameter)
     {
         yield return new WaitForSeconds(someParameter);
-        RandomSceneOff.Instance.LoadNextScene();
+        RandomSceneOff.Instance.LoadScene(3);
     }
 }

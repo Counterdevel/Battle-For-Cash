@@ -23,6 +23,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
     [Header("UI")]
     public GameObject canvasTelaInicial;
     public Text mensagem;
+    public GameObject menu;
     private void Awake()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
@@ -122,6 +123,8 @@ public class NetworkController : MonoBehaviourPunCallbacks
 
         lobbyPn.transform.localPosition = new Vector2(0, 500);
         canvasTelaInicial.SetActive(false);
+
+        menu.SetActive(true);
 
         Vector3 pos = new Vector3(Random.Range(-20, 20), playerPUN.transform.position.y, Random.Range(-20, 20));
         PhotonNetwork.Instantiate(playerPUN.name, pos, playerPUN.transform.rotation, 0);

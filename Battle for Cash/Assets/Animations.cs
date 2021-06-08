@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Pulo : MonoBehaviour
+public class Animations : MonoBehaviour
 {
     private VariableJoystick joystick;
+    public Button Jump;
     Animator animator;
 
     private void Start()
@@ -20,7 +22,11 @@ public class Pulo : MonoBehaviour
             CorridaAnim();
         }
         else
+        {
             animator.SetBool("Speed", false);
+        }
+        Jump.onClick.AddListener(AnimJump);
+
     }
 
     public void CorridaAnim()

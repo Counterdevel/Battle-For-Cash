@@ -57,9 +57,9 @@ public class GameManagerCorridaOff : MonoBehaviour
             playersvencedores[1].GetComponent<PlayerOff>().saldo += 10;
             playersvencedores[1].GetComponent<PlayerOff>().atualizaSaldo();
             /*/
+
             primeiroLugar.text = playersvencedores[0].name;
-            playersvencedores[0].GetComponent<PlayerOff>().saldo += 20;
-            playersvencedores[0].GetComponent<PlayerOff>().atualizaSaldo();
+            playersvencedores[0].GetComponent<PlayerOff>().atualizaSaldo(20);
 
             StartCoroutine(AcabouJogo(5f));
         }
@@ -68,6 +68,6 @@ public class GameManagerCorridaOff : MonoBehaviour
     IEnumerator AcabouJogo(float someParameter)
     {
         yield return new WaitForSeconds(someParameter);
-        RandomSceneOff.Instance.LoadNextScene();
+        RandomSceneOff.Instance.LoadScene(2);
     }
 }

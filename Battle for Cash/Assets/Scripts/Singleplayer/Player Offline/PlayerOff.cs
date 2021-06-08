@@ -22,8 +22,9 @@ public class PlayerOff: MonoBehaviour
         saldo = PlayerPrefs.GetInt("saldoPrefs");
     }
 
-    public void atualizaSaldo()
+    public void atualizaSaldo(int dinheiroGanho)
     {
+        saldo = saldo + dinheiroGanho;
         PlayerPrefs.SetInt("saldoPrefs", saldo);
     }
 }

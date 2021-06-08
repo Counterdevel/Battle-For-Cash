@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Photon.Pun;
 
 public class Pause : MonoBehaviour
 {
@@ -15,6 +16,11 @@ public class Pause : MonoBehaviour
 
     public void CarregaTelaInicial()
     {
+        SceneManager.LoadScene(0);
+    }
+    public void CarregaTelaInicialPhoton()
+    {
+        PhotonNetwork.Disconnect();
         SceneManager.LoadScene(0);
     }
     public void Resume()

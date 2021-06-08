@@ -8983,7 +8983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaos: []
-  inicioChuva: 3
+  inicioChuva: 1
   intervalo: 1
 --- !u!1 &1623290383 stripped
 GameObject:
