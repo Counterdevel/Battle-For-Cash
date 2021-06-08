@@ -6,13 +6,13 @@ public class PlayerMovementOff : MonoBehaviour
 {
     private VariableJoystick joystick;
     public Rigidbody rbPlayer;
-    Animator animator;
 
     public AudioSource audioSource;
     public AudioClip[] fx;
 
     public float playerspeed, forcejump; 
     public bool isGround;
+    bool podeRotacionar = true;
 
     Vector3 direction;
     void Start()
@@ -20,13 +20,16 @@ public class PlayerMovementOff : MonoBehaviour
         playerspeed = 15;
         joystick = GameObject.Find("Variable Joystick").GetComponent<VariableJoystick>();
         rbPlayer = GetComponent<Rigidbody>();
-        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
             MoveMobile();
+        if (podeRotacionar)
+        {
             Rotation();
+        }
+            
     }
 
     void MoveMobile()
@@ -35,11 +38,10 @@ public class PlayerMovementOff : MonoBehaviour
     }
     void Rotation()
     {
-        //if(direction != Vector3.zero)
-        //{
-        //    transform.rotation = Quaternion.LookRotation(direction);
-        //}
-        
+        if(direction != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(direction);
+        }
         transform.Translate(direction * (playerspeed * Time.deltaTime), Space.World);
     }
 
@@ -50,21 +52,7 @@ public class PlayerMovementOff : MonoBehaviour
             rbPlayer.AddForce(Vector3.up * forcejump, ForceMode.Impulse);
             isGround = false;
         }
-
     }
-
-    public void AnimJumpCaralhudo()
-    {
-        animator.SetBool("Jump", true);
-        StartCoroutine(AcabouPulo(0.5f));
-    }
-
-    private IEnumerator AcabouPulo(float tempo)
-    {
-        yield return new WaitForSeconds(tempo);
-        animator.SetBool("Jump", false);
-    }
-
 
 
     private void OnCollisionEnter(Collision collision)
@@ -88,6 +76,8 @@ public class PlayerMovementOff : MonoBehaviour
         {
             playerspeed = 5;
             rbPlayer.freezeRotation = false;
+            podeRotacionar = false;
+            StartCoroutine(Baleado(5f));
         }
         if (collision.gameObject.CompareTag("Empurra"))
         {
@@ -95,6 +85,16 @@ public class PlayerMovementOff : MonoBehaviour
         }
     }
 
+    private IEnumerator Baleado(float tempo)
+    {
+        yield return new WaitForSeconds(tempo);
+        playerspeed = 15f;
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+        rbPlayer.freezeRotation = true;
+        rbPlayer.velocity = Vector3.zero;
+        rbPlayer.angularVelocity = Vector3.zero;
+        podeRotacionar = true;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("WaterSom"))
@@ -102,7 +102,7 @@ public class PlayerMovementOff : MonoBehaviour
             audioSource.PlayOneShot(fx[0]);
         }
         if (other.CompareTag("Water"))
-        {  
+        {
             playerspeed = 15;
             rbPlayer.freezeRotation = true;
             rbPlayer.velocity = Vector3.zero;

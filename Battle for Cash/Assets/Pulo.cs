@@ -4,14 +4,30 @@ using UnityEngine;
 
 public class Pulo : MonoBehaviour
 {
+    private VariableJoystick joystick;
     Animator animator;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        joystick = GameObject.Find("Variable Joystick").GetComponent<VariableJoystick>(); 
     }
 
-    public void AnimJumpCaralhudo()
+    private void Update()
+    {
+        if (joystick.Horizontal >= 0.1 || joystick.Horizontal <= -0.1 || joystick.Vertical >= 0.1 || joystick.Vertical <= -0.1)
+        {
+            CorridaAnim();
+        }
+        else
+            animator.SetBool("Speed", false);
+    }
+
+    public void CorridaAnim()
+    {
+        animator.SetBool("Speed", true);       
+    }
+    public void AnimJump()
     {
         animator.SetBool("Jump", true);
         StartCoroutine(AcabouPulo(0.5f));

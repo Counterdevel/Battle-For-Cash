@@ -624,8 +624,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: ClicouJogar
+      - m_Target: {fileID: 1042335395}
+        m_MethodName: TelaInicial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
