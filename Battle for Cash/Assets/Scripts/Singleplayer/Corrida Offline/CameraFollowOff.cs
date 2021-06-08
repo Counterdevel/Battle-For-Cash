@@ -11,8 +11,8 @@ public class CameraFollowOff : MonoBehaviour
 
     private void Start()
     {
-            cameraTarget = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-            lookTarget = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+            //cameraTarget = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+            //lookTarget = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     private void LateUpdate()

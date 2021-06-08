@@ -26,21 +26,21 @@ public class NPCCaixa : MonoBehaviour
     {
         MoveRandom();
 
-        if(rigibody.velocity.magnitude > 0.2f)
-        {
-            animator.SetFloat("Speed", 0.2f);
-        }
+        animator.SetBool("Speed", true);
     }
 
     public void MoveRandom()
     {
         float distance = Vector3.Distance(transform.position, waypoints[index].position);
 
-        if(distance < 1)
+        if(distance < 2)
         {
             index = Random.Range(0, 88);
         }
 
+        Quaternion rotate = Quaternion.LookRotation(waypoints[index].position);
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotate, 50f * Time.deltaTime);
         transform.position = Vector3.MoveTowards(transform.position, waypoints[index].position, speed * Time.deltaTime);
     }
 
