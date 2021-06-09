@@ -9,7 +9,7 @@ public class NPCCorrida : MonoBehaviour
     Animator animator;
     Rigidbody rigidbody;
 
-    public Transform waypoint;
+    public Transform waypoint;  //Pega o waypoint
 
     private void Start()
     {
@@ -20,25 +20,20 @@ public class NPCCorrida : MonoBehaviour
 
     private void Update()
     {
-        agent.SetDestination(waypoint.position);
-        animator.SetBool("Speed", true);
+        agent.SetDestination(waypoint.position);    //O NPC faz o percurso até o waypoint
+        animator.SetBool("Speed", true);    //Ativa a animação de run para o NPC
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.CompareTag("Bullet"))
-        {
-            agent.enabled = false;
-            StartCoroutine("VoltaCorre", 5);
-        }
-        if (collision.collider.CompareTag("Empurra"))
+        if(collision.collider.CompareTag("Bullet") || collision.collider.CompareTag("Empurra")) //Se NPC colidir com a bullet ou a plataforma que empurra desabilita o agent
         {
             agent.enabled = false;
             StartCoroutine("VoltaCorre", 5);
         }
     }
 
-    private IEnumerator VoltaCorre(float time)
+    private IEnumerator VoltaCorre(float time)  //Cria um timer que quando chega a 0 ativa o agent
     {
         yield return new WaitForSeconds(time);
 
